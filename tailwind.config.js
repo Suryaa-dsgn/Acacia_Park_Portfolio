@@ -75,6 +75,11 @@ module.exports = {
       maxWidth: {
         container: "1360px",
       },
+      screens: {
+        // IA section 5 breakpoints: wide >= 1100 (navigator as sidebar), below
+        // that the navigator collapses to a drawer.
+        shell: "1100px",
+      },
     },
   },
   plugins: [],

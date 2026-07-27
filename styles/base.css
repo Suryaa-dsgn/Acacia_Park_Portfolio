@@ -34,6 +34,35 @@ body,
   box-shadow: var(--shadow-sm);
 }
 
+/* Loading skeleton shimmer (IA section 4). A quiet sweep over a panel fill.
+   Reduced motion drops the animation to a static block. */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-panel) 0%,
+    var(--color-panel-raised) 50%,
+    var(--color-panel) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    background: var(--color-panel-raised);
+  }
+}
+
 /* Tabular numerals utility. Apply to any numeric text. */
 .tabular {
   font-variant-numeric: tabular-nums;
