@@ -1,0 +1,138 @@
+/*
+ * tokens.css
+ * The single source of truth for color, elevation, motion, and categorical
+ * palette variables. Dark mode is the default (:root). Light mode overrides
+ * under [data-theme="light"]. Never hardcode a hex in a component. Every theme
+ * decision flows through this layer so light and dark stay in sync.
+ * Derived from DESIGN_GUIDELINES.md sections 3, 4, 6, 7.
+ */
+
+:root,
+[data-theme="dark"] {
+  /* neutrals */
+  --color-bg: #0c0e0c;
+  --color-surface: #101310; /* header, footer, sunken panels */
+  --color-panel: #10130f; /* cards and panels, always with a border */
+  --color-panel-raised: #161a14; /* hover, nested, active rows */
+  --color-border: #262b24; /* hairline default */
+  --color-border-strong: #363c33; /* dividers that need to read */
+
+  /* text */
+  --color-text-serif: #f2efe3; /* headlines, warm white */
+  --color-text: #ece8db; /* body and data */
+  --color-text-muted: #9a9e91;
+  --color-text-faint: #6d7267;
+
+  /* interactive accent (eyebrows, links, active nav) */
+  --color-accent: #7fc7a6;
+  --color-accent-strong: #9ad9bb;
+
+  /* semantic four */
+  --color-pos: #7cbe98;
+  --color-warn: #d2a24f;
+  --color-neg: #d68a6b;
+  --color-info: #8f97cf;
+
+  /* soft fills for the semantic four (backgrounds, tracks) */
+  --color-pos-soft: rgba(124, 190, 152, 0.14);
+  --color-warn-soft: rgba(210, 162, 79, 0.14);
+  --color-neg-soft: rgba(214, 138, 107, 0.14);
+  --color-info-soft: rgba(143, 151, 207, 0.14);
+
+  /* a reusable accent-soft (import dropzone drag state, segmented toggles) */
+  --color-accent-soft: rgba(127, 199, 166, 0.14);
+
+  /* the inverted panel: a pale surface that pops out of the dark grid */
+  --color-invert-bg: #dfe8dd;
+  --color-invert-ink: #1b3a2b;
+  --color-invert-bar: #244e39;
+  --color-invert-track: rgba(27, 58, 43, 0.14);
+
+  /* elevation: dark mode is drawn with borders, not shadows */
+  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
+
+  /* categorical palette (charts with more than four series), DG 3.5 */
+  --cat-1: var(--color-pos); /* green */
+  --cat-2: var(--color-info); /* periwinkle */
+  --cat-3: #b58fc9; /* mauve */
+  --cat-4: var(--color-warn); /* amber */
+  --cat-5: var(--color-neg); /* coral */
+  --cat-6: #6fb0c4; /* teal-blue */
+  --cat-7: #c9c07a; /* olive */
+}
+
+[data-theme="light"] {
+  /* neutrals */
+  --color-bg: #f4f2ea; /* warm paper */
+  --color-surface: #ebe9df; /* header, footer, sunken panels */
+  --color-panel: #faf9f3; /* cards and panels */
+  --color-panel-raised: #ffffff; /* hover, nested, active rows */
+  --color-border: #e0dbcb;
+  --color-border-strong: #cdc7b4;
+
+  /* text */
+  --color-text-serif: #14201a; /* deep green-black */
+  --color-text: #22302a;
+  --color-text-muted: #5f675b;
+  --color-text-faint: #8b9083;
+
+  /* interactive accent */
+  --color-accent: #2f7d5b;
+  --color-accent-strong: #226146;
+
+  /* semantic four, darkened for contrast on paper */
+  --color-pos: #2f8a5f;
+  --color-warn: #a8791f;
+  --color-neg: #b6553a;
+  --color-info: #4750a3;
+
+  /* soft fills */
+  --color-pos-soft: rgba(47, 138, 95, 0.12);
+  --color-warn-soft: rgba(168, 121, 31, 0.12);
+  --color-neg-soft: rgba(182, 85, 58, 0.12);
+  --color-info-soft: rgba(71, 80, 163, 0.12);
+
+  --color-accent-soft: rgba(47, 125, 91, 0.12);
+
+  /* inverted panel: dark forest surface on the light page */
+  --color-invert-bg: #16241b;
+  --color-invert-ink: #eae7da;
+  --color-invert-bar: #7cbe98;
+  --color-invert-track: rgba(234, 231, 218, 0.14);
+
+  /* elevation: light mode gets real, soft shadows */
+  --shadow-sm: 0 1px 2px rgba(20, 32, 26, 0.06);
+  --shadow-md: 0 6px 20px rgba(20, 32, 26, 0.08);
+  --shadow-lg: 0 16px 40px rgba(20, 32, 26, 0.1);
+
+  /* categorical palette light-mode variants (darken the same hues) */
+  --cat-3: #8e63a6;
+  --cat-6: #3f7f95;
+  --cat-7: #8a8340;
+}
+
+:root {
+  /* font role aliases. GeistSans exposes --font-geist-sans via its variable
+     class on <html>; the serif and mono families set their own variables. */
+  --font-sans: var(--font-geist-sans);
+
+  /* motion tokens, DG 7.2 (theme-independent) */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 360ms;
+
+  /* eased theme cross-fade, DG 4.2 */
+  --theme-transition: background-color 240ms ease, color 240ms ease,
+    border-color 240ms ease;
+}
+
+/* accessibility: honor user motion, transparency, and contrast preferences */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --theme-transition: none;
+  }
+}
