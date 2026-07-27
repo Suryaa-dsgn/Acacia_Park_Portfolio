@@ -1,7 +1,7 @@
 import { dataSource } from "@/lib/dataSource";
 import { isQuarterSlug } from "@/lib/quarter";
 import { holdingsHref } from "@/lib/nav";
-import { ReportPlaceholder } from "@/components/report/ReportPlaceholder";
+import { HoldingReportView } from "@/components/report/HoldingReportView";
 import { EmptyState } from "@/components/states/EmptyState";
 import { NotFoundState } from "@/components/states/NotFoundState";
 import { quarterShortLabel } from "@/lib/quarter";
@@ -29,5 +29,5 @@ export default async function HoldingsPage({
     );
   }
 
-  return <ReportPlaceholder report={report} />;
+  return <HoldingReportView report={report} />;
 }
