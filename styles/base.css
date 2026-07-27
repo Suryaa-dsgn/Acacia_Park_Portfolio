@@ -27,6 +27,13 @@ body,
   transition: var(--theme-transition);
 }
 
+/* Light mode gives cards and panels a soft resting shadow. Dark mode stays
+   flat, drawn with borders only (DG 6). */
+[data-theme="light"] .panel,
+[data-theme="light"] .kpi {
+  box-shadow: var(--shadow-sm);
+}
+
 /* Tabular numerals utility. Apply to any numeric text. */
 .tabular {
   font-variant-numeric: tabular-nums;
