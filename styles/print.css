@@ -1,0 +1,58 @@
+/*
+ * print.css  (export spec section 3)
+ * Lays out the report for paper: the app shell chrome is hidden, only the report
+ * prints. The PDF uses the light palette (the report sets data-theme="light"
+ * before printing), charts stay vector (SVG), and page breaks avoid orphaning a
+ * section title from its content.
+ */
+
+@media print {
+  @page {
+    size: Letter;
+    margin: 0.6in;
+  }
+
+  /* Print exact colors so semantic chips and bars survive. */
+  html,
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide the shell chrome and any control marked no-print. */
+  .no-print {
+    display: none !important;
+  }
+
+  /* The report fills the page; drop sticky offsets and scroll containers. */
+  main#report {
+    max-width: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Flatten the load-reveal so nothing prints mid-animation. */
+  main#report * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Keep panels and sections whole; never orphan a title. */
+  .panel,
+  main#report section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  h1,
+  h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Light-mode panels get a hairline instead of a shadow on paper. */
+  .panel {
+    box-shadow: none !important;
+    border: 1px solid var(--color-border) !important;
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "identity": {
+    "kind": "property",
+    "tradeName": "Acacia Park Apartments",
+    "legalEntity": "Universe at Acacia (DE), LLC",
+    "manager": "Global Integrity Realty Corporation",
+    "addressLine": "5280 N Little Mountain Drive",
+    "cityStateZip": "San Bernardino, CA 92407",
+    "submarket": "Inland Empire",
+    "units": 304,
+    "totalSqFt": 258400
+  },
+  "quarters": {
+    "2026-q1": {
+      "income": [
+        {
+          "key": "rentalIncome",
+          "label": "Rental Income",
+          "glCode": "4300-0000",
+          "ptdCurrent": 1576855.05,
+          "ptdPrior": 1486385.45,
+          "ytdCurrent": 1576855.05,
+          "ytdPrior": 1486385.45
+        },
+        {
+          "key": "otherResidentIncome",
+          "label": "Other Resident Income",
+          "glCode": "4499-0000",
+          "ptdCurrent": 139360.02,
+          "ptdPrior": 141321.94,
+          "ytdCurrent": 139360.02,
+          "ytdPrior": 141321.94
+        },
+        {
+          "key": "otherPropertyIncome",
+          "label": "Other Property Income",
+          "glCode": "4998-0000",
+          "ptdCurrent": 53446.27,
+          "ptdPrior": 41388.87,
+          "ytdCurrent": 53446.27,
+          "ytdPrior": 41388.87
+        }
+      ],
+      "expenses": [
+        {
+          "key": "fixedExpenses",
+          "label": "Fixed Expenses",
+          "glCode": "5199-0000",
+          "ptdCurrent": 710510.62,
+          "ptdPrior": 324957.81,
+          "ytdCurrent": 710510.62,
+          "ytdPrior": 324957.81
+        },
+        {
+          "key": "repairsMaintenance",
+          "label": "Repairs & Maintenance",
+          "glCode": "5399-0000",
+          "ptdCurrent": 84055.33,
+          "ptdPrior": 49450.18,
+          "ytdCurrent": 84055.33,
+          "ytdPrior": 49450.18
+        },
+        {
+          "key": "utilities",
+          "label": "Utilities",
+          "glCode": "5499-0000",
+          "ptdCurrent": 92365.13,
+          "ptdPrior": 92079.71,
+          "ytdCurrent": 92365.13,
+          "ytdPrior": 92079.71
+        },
+        {
+          "key": "gAndA",
+          "label": "General & Administrative",
+          "glCode": "6770-9999",
+          "ptdCurrent": 27365.19,
+          "ptdPrior": 20346.42,
+          "ytdCurrent": 27365.19,
+          "ytdPrior": 20346.42
+        },
+        {
+          "key": "marketing",
+          "label": "Marketing",
+          "glCode": "6771-9999",
+          "ptdCurrent": 18174.96,
+          "ptdPrior": 12899.31,
+          "ytdCurrent": 18174.96,
+          "ytdPrior": 12899.31
+        },
+        {
+          "key": "makeReadyTurnover",
+          "label": "Make Ready / Turnover",
+          "glCode": "6772-9999",
+          "ptdCurrent": 56564.11,
+          "ptdPrior": 97766.28,
+          "ytdCurrent": 56564.11,
+          "ytdPrior": 97766.28
+        },
+        {
+          "key": "professionalServices",
+          "label": "Professional Services",
+          "glCode": "6776-9999",
+          "ptdCurrent": 86657.89,
+          "ptdPrior": 84330.55,
+          "ytdCurrent": 86657.89,
+          "ytdPrior": 84330.55
+        },
+        {
+          "key": "payrollLabor",
+          "label": "Payroll / Labor",
+          "glCode": "6996-0000",
+          "ptdCurrent": 143763.35,
+          "ptdPrior": 180645.23,
+          "ytdCurrent": 143763.35,
+          "ytdPrior": 180645.23
+        }
+      ],
+      "rentRoll": {
+        "asOf": "2026-03-31",
+        "totalUnits": 304,
+        "occupiedUnits": 291,
+        "vacantUnits": 13,
+        "physicalOccupancy": 0.957236842105263,
+        "totalSqFt": 258400,
+        "avgUnitSqFt": 850.0,
+        "avgUnitRent": 1811.0,
+        "avgOccupiedUnitRent": 1952.81,
+        "avgResidentRent": 1876.95,
+        "totalMarketRent": 593657.0,
+        "totalInPlaceRent": 550544.0,
+        "economicOccupancy": 0.927377256563976
+      },
+      "leasing": {
+        "moveIns": 28,
+        "moveOuts": 23,
+        "netAbsorption": 5,
+        "noticesToVacate": 22,
+        "unitsRented": 57,
+        "renewals": 48,
+        "evictions": 2
+      },
+      "currentYear": 2026,
+      "priorYear": 2025,
+      "occCurrent": [
+        0.931239,
+        0.939717,
+        0.940239,
+        0.935904,
+        0.934879,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "occPrior": [
+        0.9635,
+        0.9583,
+        0.9411,
+        0.9315,
+        0.9555,
+        0.9633,
+        0.9492,
+        0.9401,
+        0.9371,
+        0.946,
+        0.9361,
+        0.9461
+      ],
+      "narrative": [
+        {
+          "key": "marketCommentary",
+          "title": "Market Commentary",
+          "status": "Gathering Info",
+          "body": "Acacia Park Apartments operates in the San Bernardino submarket of the Inland Empire. [Q1 2026 market commentary to be authored / sourced from G2 prose artifact. Carried Q4 2025 baseline: submarket vacancy ~5.1%, 2024 rent growth 2.7%, workforce-housing demand profile.]"
+        },
+        {
+          "key": "propertyOperations",
+          "title": "Property Operations",
+          "status": "Work in Progress",
+          "body": "[Q1 2026 property operations narrative to be authored. Q1 2026 governed results: Total Income $1,769,661 (+6.0% YoY); Total Operating Expenses $1,219,457 (+41.4% YoY, driven by Fixed/Operating expense category); NOI $550,205 (-31.8% YoY). Physical occupancy 93-94% through May 2026.]"
+        },
+        {
+          "key": "conditionsRenovation",
+          "title": "Property Conditions & Renovation Plans",
+          "status": "Gathering Info",
+          "body": "[Q1 2026 capital/renovation narrative to be authored. Q4 2025 baseline noted: 19-building roof replacement completed (20-yr warranty); garage roof project continuing into 2026; rolling interior upgrades on unit turns.]"
+        }
+      ],
+      "provenance": [
+        {
+          "text": "All operating-statement figures sourced from MAGNUS governed table PnlSummaryRow (Cash basis), source artifact cmphzk3fy0001a04xdvp5ml8."
+        },
+        {
+          "text": "Subtotals and NOI trace to Yardi Income Statement 'Report1' cells: Total Income=B204, Total Expenses=B447, Net Operating Income=B449."
+        },
+        {
+          "text": "Rent roll figures: MarketRentSchedule (as-of 03/31/2026). Occupancy: OccupancySummaryRow. Leasing: ResidentActivity (Q1 2026)."
+        },
+        {
+          "text": "Period & comparative figures pulled from MAGNUS durable store branch. Entity from CoreAsset. YoY %Δ computed in-cell (live Excel formulas)."
+        },
+        {
+          "text": "Static identity (address, manager, trade name) carried from prior governed quarterly; flagged 'Yardi report header' in Source column."
+        },
+        {
+          "text": "Narrative sections marked for authoring/G2 sourcing; all financial figures are governed and auditable to raw source above."
+        }
+      ]
+    },
+    "2025-q4": {
+      "income": [
+        {
+          "key": "rentalIncome",
+          "label": "Rental Income",
+          "glCode": "4300-0000",
+          "ptdCurrent": 1587564.56,
+          "ptdPrior": 1559353.55,
+          "ytdCurrent": 6260486.06,
+          "ytdPrior": 5940564.79
+        },
+        {
+          "key": "otherResidentIncome",
+          "label": "Other Resident Income",
+          "glCode": "4499-0000",
+          "ptdCurrent": 147739.16,
+          "ptdPrior": 146308.81,
+          "ytdCurrent": 580120.07,
+          "ytdPrior": 577962.52
+        },
+        {
+          "key": "otherPropertyIncome",
+          "label": "Other Property Income",
+          "glCode": "4998-0000",
+          "ptdCurrent": 59869.81,
+          "ptdPrior": 17981.71,
+          "ytdCurrent": 157320.31,
+          "ytdPrior": 70220.34
+        }
+      ],
+      "expenses": [
+        {
+          "key": "fixedExpenses",
+          "label": "Fixed Expenses",
+          "glCode": "5199-0000",
+          "ptdCurrent": 353985.96,
+          "ptdPrior": 262107.12,
+          "ytdCurrent": 1384359.44,
+          "ytdPrior": 1033553.29
+        },
+        {
+          "key": "repairsMaintenance",
+          "label": "Repairs & Maintenance",
+          "glCode": "5399-0000",
+          "ptdCurrent": 72954.24,
+          "ptdPrior": 76310.24,
+          "ytdCurrent": 262253.57,
+          "ytdPrior": 216384.66
+        },
+        {
+          "key": "utilities",
+          "label": "Utilities",
+          "glCode": "5499-0000",
+          "ptdCurrent": 103257.56,
+          "ptdPrior": 95268.08,
+          "ytdCurrent": 395455.24,
+          "ytdPrior": 332513.81
+        },
+        {
+          "key": "gAndA",
+          "label": "General & Administrative",
+          "glCode": "6770-9999",
+          "ptdCurrent": 31482.29,
+          "ptdPrior": 25230.86,
+          "ytdCurrent": 109059.89,
+          "ytdPrior": 93846.02
+        },
+        {
+          "key": "marketing",
+          "label": "Marketing",
+          "glCode": "6771-9999",
+          "ptdCurrent": 11185.18,
+          "ptdPrior": 13590.62,
+          "ytdCurrent": 60160.29,
+          "ytdPrior": 52379.68
+        },
+        {
+          "key": "makeReadyTurnover",
+          "label": "Make Ready / Turnover",
+          "glCode": "6772-9999",
+          "ptdCurrent": 48048.99,
+          "ptdPrior": 30613.39,
+          "ytdCurrent": 224920.99,
+          "ytdPrior": 164186.39
+        },
+        {
+          "key": "professionalServices",
+          "label": "Professional Services",
+          "glCode": "6776-9999",
+          "ptdCurrent": 82589.85,
+          "ptdPrior": 84719.69,
+          "ytdCurrent": 340007.62,
+          "ytdPrior": 294711.81
+        },
+        {
+          "key": "payrollLabor",
+          "label": "Payroll / Labor",
+          "glCode": "6996-0000",
+          "ptdCurrent": 170968.93,
+          "ptdPrior": 176424.13,
+          "ytdCurrent": 719512.26,
+          "ytdPrior": 608188.91
+        }
+      ],
+      "currentYear": 2025,
+      "priorYear": 2024,
+      "occCurrent": [
+        0.9635,
+        0.9583,
+        0.9411,
+        0.9315,
+        0.9555,
+        0.9633,
+        0.9492,
+        0.9401,
+        0.9371,
+        0.946,
+        0.9361,
+        0.9461
+      ],
+      "occPrior": [
+        0.9063,
+        0.8981,
+        0.9133,
+        0.9236,
+        0.9164,
+        0.9258,
+        0.9437,
+        0.9576,
+        0.9502,
+        0.9497,
+        0.9399,
+        0.9411
+      ],
+      "narrative": [
+        {
+          "key": "marketCommentary",
+          "title": "Market Commentary",
+          "status": "Completed",
+          "body": "Demand for apartments in San Bernardino is rising slowly. Absorption has run positive over the past two years. Vacancy measures 5.1% as of the fourth quarter of 2025 and will decline in the second half of 2025 into 2026 as new supply leases up. As is typical, vacancy in San Bernardino trends below the Inland Empire market average due to strong demand for the area's affordable housing. Supply additions are up, but infrequently historically. Developed predominantly in the 1970s and 1980s, most apartments in San Bernardino, Fontana, Rialto, and Grand Terrace can be considered workforce housing. A few communities in Redlands command rents approximately 20% above the submarket average and primarily cater to a higher-income workforce. A wave of high-end supply has been completed over the past two years, and a few projects remain underway. Recent development is spread across the submarket, although concentrated in Fontana. Lease-up velocity at the new properties accelerated in 2024. Rent growth increased to 2.7% in 2024 in conjunction with stronger demand and improved affordability, and a similar growth rate will likely be achieved in 2025."
+        },
+        {
+          "key": "propertyOperations",
+          "title": "Property Operations",
+          "status": "Completed",
+          "body": "Acacia Park Apartments closed out 2025 with strong rent growth and continued demand supporting stable performance in a competitive Inland Empire market. Rental income increased year over year, and average in-place rents trended upward consistently throughout the year, reflecting disciplined revenue management and solid renewal performance across the 304-unit community. Occupancy remained healthy in the mid-90 percent range, reinforcing the property’s position as desirable workforce housing in San Bernardino. While total income improved, expenses were elevated during the quarter as the property addressed significant garage repairs, HVAC work, and higher turnover activity tied to strong leasing velocity and unit upgrades. Additionally, Acacia Park is now in a financial position that allowed management to catch up on deferred maintenance and outstanding vendor payments, which temporarily increased overall expense levels but strengthens the asset’s operational footing moving forward. Despite the near-term margin pressure, the combination of steady rent growth, stabilized occupancy, and proactive capital and maintenance investment positions the property well for improved expense normalization and stronger NOI performance heading into 2026."
+        },
+        {
+          "key": "conditionsRenovation",
+          "title": "Property Conditions & Renovation Plans",
+          "status": "Completed",
+          "body": "Acacia Park is constantly being enhanced by small exterior projects completed by maintenance team which include touch up paintings, red curb painting, signage upgrades and landscape repairs. In Q4 all 19 building, including office and mailroom building roofs have been repalced and project completed with a 20 year warranty. In Q4, the garage roof replacement project continues. Garage roof project will continue till next year 2026. No other Capital projects are planned for Q4. Interior upgrades are planned to be completed on a rolling basis as units become vacant allowing gradual improvements without major disruptions to tenants. Overall, Acacia Park continues to thrive as a well-kept, attractive community."
+        }
+      ],
+      "provenance": [
+        {
+          "text": "Operating statement sourced from the Q4 2025 Yardi Income Statement (Cash basis), Acacia Park Apartments."
+        },
+        {
+          "text": "Occupancy from the governed 12-month occupancy series (2024 and 2025)."
+        },
+        {
+          "text": "Rent roll rent metrics carried from the Q1 2026 governed snapshot; the Q4 2025 rent schedule is not separately governed. Occupancy counts derived from the occupancy series."
+        },
+        {
+          "text": "Leasing activity is not governed for Q4 2025."
+        },
+        {
+          "text": "GL account codes from the Yardi chart of accounts."
+        }
+      ],
+      "rentRoll": {
+        "asOf": "2025-12-31",
+        "totalUnits": 304,
+        "occupiedUnits": 288,
+        "vacantUnits": 16,
+        "physicalOccupancy": 0.947368,
+        "totalSqFt": 258400,
+        "avgUnitSqFt": 850.0,
+        "avgUnitRent": 1811.0,
+        "avgOccupiedUnitRent": 1952.81,
+        "avgResidentRent": 1876.95,
+        "totalMarketRent": 593657.0,
+        "totalInPlaceRent": 550544.0,
+        "economicOccupancy": 0.927377256563976
+      },
+      "leasing": null
+    }
+  }
+}

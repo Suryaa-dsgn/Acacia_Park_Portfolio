@@ -103,8 +103,12 @@ function aggregateRentRoll(reports: QuarterlyReport[]): RentRollSummary {
   };
 }
 
-function aggregateLeasing(reports: QuarterlyReport[]): LeasingActivity {
-  const ls = reports.map((r) => r.leasing);
+function aggregateLeasing(reports: QuarterlyReport[]): LeasingActivity | null {
+  // Roll up only the properties whose leasing is governed this quarter.
+  const ls = reports
+    .map((r) => r.leasing)
+    .filter((x): x is LeasingActivity => x != null);
+  if (ls.length === 0) return null;
   const sum = (pick: (x: LeasingActivity) => number) =>
     ls.reduce((a, x) => a + pick(x), 0);
   const moveIns = sum((x) => x.moveIns);

@@ -80,7 +80,10 @@ describe("operating-statement invariants hold for every fixture", () => {
         expect(Math.abs(rr.economicOccupancy - rr.totalInPlaceRent / rr.totalMarketRent)).toBeLessThan(1e-4);
         expect(rr.physicalOccupancy).toBeGreaterThan(0);
         expect(rr.physicalOccupancy).toBeLessThanOrEqual(1);
-        expect(r.leasing.netAbsorption).toBe(r.leasing.moveIns - r.leasing.moveOuts);
+        // Leasing may be ungoverned for a quarter (null); when present it is consistent.
+        if (r.leasing) {
+          expect(r.leasing.netAbsorption).toBe(r.leasing.moveIns - r.leasing.moveOuts);
+        }
       }
     }
   });

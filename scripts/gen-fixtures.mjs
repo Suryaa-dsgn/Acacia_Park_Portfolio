@@ -9,7 +9,7 @@
 //
 // No em dashes anywhere in the emitted data. Governed source em dashes are
 // handled by lib/normalize.ts on ingestion; these fixtures are clean already.
-import { writeFileSync, mkdirSync, rmSync } from "node:fs";
+import { writeFileSync, mkdirSync, rmSync, readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -278,43 +278,11 @@ const OCC = {
   elmgrove2026: [0.945, 0.947, 0.948, 0.949, 0.951, null, null, null, null, null, null, null],
 };
 
+// Acacia is not a synthetic seed: it is real governed data ingested from the
+// two client workbooks (see scripts/ingest.py -> scripts/acacia-governed.json),
+// assembled below. The following four are clearly-labeled sample properties so
+// the navigator, roll-up, and YoY are exercisable across occupancy bands.
 const SEEDS = [
-  {
-    id: "acacia",
-    tradeName: "Universe at Acacia",
-    legalEntity: "Universe at Acacia (DE), LLC",
-    manager: "Meridian Residential",
-    addressLine: "5280 N Little Mountain Dr",
-    cityStateZip: "San Bernardino, CA 92407",
-    submarket: "Inland Empire",
-    units: 304,
-    totalSqFt: 258400,
-    quarters: ["2025-q4", "2026-q1"],
-    // Exact governed Q1 2026 breakdown. Income and expense lines sum to the
-    // governed totals; NOI follows. (DM section 2.3.)
-    incomeCur: { rentalIncome: 1650000, otherResidentIncome: 85000, otherPropertyIncome: 34661.34 },
-    expenseCur: {
-      fixedExpenses: 174000, repairsMaintenance: 205000, utilities: 268000, gAndA: 96000,
-      marketing: 34000, makeReadyTurnover: 28000, professionalServices: 13456.58, payrollLabor: 401000,
-    },
-    incomePriorExplicit: { rentalIncome: 1560000, otherResidentIncome: 78000, otherPropertyIncome: 31096.26 },
-    expensePriorExplicit: {
-      fixedExpenses: 150000, repairsMaintenance: 120000, utilities: 190000, gAndA: 60000,
-      marketing: 22000, makeReadyTurnover: 12000, professionalServices: 8475.49, payrollLabor: 300000,
-    },
-    rr: {
-      occupied: 291, totalMarketRent: 593657, totalInPlaceRent: 550544,
-      avgUnitSqFt: 850, avgUnitRent: 1811, avgOccupiedUnitRent: 1952.81, avgResidentRent: 1876.95,
-    },
-    leasingQ1: { moveIns: 28, moveOuts: 23, noticesToVacate: 22, unitsRented: 57, renewals: 48, evictions: 2 },
-    occ2025: OCC.acacia2025,
-    occ2026: OCC.acacia2026,
-    narrativeQ1: [
-      { key: "marketCommentary", title: NARR_TITLES.marketCommentary, status: "Completed", body: "Inland Empire demand held firm through the quarter. In-place rents moved up modestly while concessions persisted at the low end of the market. Renewal conversions stayed healthy." },
-      { key: "propertyOperations", title: NARR_TITLES.propertyOperations, status: "Work in Progress", body: "Turn times improved after the make-ready backlog cleared in February. A payroll reclassification is under review with the regional team." },
-      { key: "conditionsRenovation", title: NARR_TITLES.conditionsRenovation, status: "Gathering Info", body: null },
-    ],
-  },
   {
     id: "brightwater",
     tradeName: "Brightwater Commons",
@@ -441,11 +409,71 @@ function parseCityState(cityStateZip) {
   return { city: (cityPart ?? "").trim(), state };
 }
 
+// ---- Acacia: real governed data (scripts/acacia-governed.json) ----
+// Assembles the contract report from the ingested line items. Totals and NOI are
+// summed from the lines (never trusted as literals), matching the governed file.
+function statementFromLines(incomeRaw, expenseRaw) {
+  const income = incomeRaw.map((l) => ({ ...l, favorability: "higherIsBetter" }));
+  const expenses = expenseRaw.map((l) => ({ ...l, favorability: "lowerIsBetter" }));
+  const totalIncome = sumLines("totalIncome", "Total Income", income, "higherIsBetter", { isSubtotal: true });
+  const totalOperatingExpenses = sumLines("totalOperatingExpenses", "Total Operating Expenses", expenses, "lowerIsBetter", { isSubtotal: true });
+  const netOperatingIncome = subLines("netOperatingIncome", "Net Operating Income", totalIncome, totalOperatingExpenses, "higherIsBetter", { isResult: true });
+  return { income, totalIncome, expenses, totalOperatingExpenses, netOperatingIncome };
+}
+
+function acaciaReport(governed, quarter) {
+  const q = governed.quarters[quarter];
+  const meta = META[quarter];
+  return {
+    meta,
+    identity: { ...governed.identity },
+    operatingStatement: statementFromLines(q.income, q.expenses),
+    rentRoll: q.rentRoll,
+    leasing: q.leasing, // null for Q4 2025 (not governed)
+    occupancySeries: {
+      currentYear: q.currentYear,
+      priorYear: q.priorYear,
+      current: q.occCurrent,
+      prior: q.occPrior,
+    },
+    narrative: q.narrative,
+    images: [
+      { slot: "propertyPhoto", url: null, alt: `${governed.identity.tradeName} property photo` },
+      { slot: "aerialSiteMap", url: null, alt: `${governed.identity.tradeName} aerial site map` },
+    ],
+    provenance: q.provenance,
+    scope: { kind: "property", propertyId: "acacia" },
+  };
+}
+
 // ---- write ----
 rmSync(FIX, { recursive: true, force: true });
 mkdirSync(FIX, { recursive: true });
 
 const manifestProperties = [];
+
+// Acacia first: the real governed property assembled from the client workbooks.
+const governed = JSON.parse(
+  readFileSync(join(ROOT, "scripts", "acacia-governed.json"), "utf8"),
+);
+const acaciaQuarters = ["2025-q4", "2026-q1"];
+mkdirSync(join(FIX, "acacia"), { recursive: true });
+for (const q of acaciaQuarters) {
+  const report = acaciaReport(governed, q);
+  writeFileSync(join(FIX, "acacia", `${q}.json`), JSON.stringify(report, null, 2) + "\n");
+}
+{
+  const { city, state } = parseCityState(governed.identity.cityStateZip);
+  manifestProperties.push({
+    propertyId: "acacia",
+    tradeName: governed.identity.tradeName,
+    city,
+    state,
+    availableQuarters: acaciaQuarters,
+    latestNoi: acaciaReport(governed, "2026-q1").operatingStatement.netOperatingIncome.ptdCurrent,
+  });
+}
+
 for (const seed of SEEDS) {
   mkdirSync(join(FIX, seed.id), { recursive: true });
   for (const q of seed.quarters) {
@@ -480,5 +508,5 @@ writeFileSync(
 );
 
 console.log(
-  `Wrote fixtures for ${SEEDS.length} properties across ${QUARTER_ORDER.length} quarters, plus manifest.json`,
+  `Wrote fixtures for ${manifestProperties.length} properties (Acacia real + ${SEEDS.length} sample), plus manifest.json`,
 );

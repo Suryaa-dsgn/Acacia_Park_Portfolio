@@ -11,6 +11,15 @@ import type { QuarterlyReport } from "@/lib/types";
 
 export function Leasing({ report }: { report: QuarterlyReport }) {
   const l = report.leasing;
+  if (!l) {
+    return (
+      <Panel eyebrow="This quarter" title="Leasing Activity">
+        <p className="font-sans text-body italic text-muted">
+          Not governed for this quarter.
+        </p>
+      </Panel>
+    );
+  }
   return (
     <Panel eyebrow="This quarter" title="Leasing Activity">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">

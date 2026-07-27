@@ -80,6 +80,7 @@ export function normalizeText(s: string): string {
     .replace(/\s*—\s*/g, ": ") // em dash -> colon + space
     .replace(/–/g, "-") // en dash -> hyphen (ranges)
     .replace(/ /g, " ") // non-breaking space -> space
+    .replace(/−/g, "-") // minus sign U+2212 -> hyphen
     .replace(/\s+/g, " ")
     .trim();
 }

@@ -29,7 +29,7 @@ export function AppShell({
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-30 h-14 border-b border-hairline bg-surface">
+      <header className="no-print sticky top-0 z-30 h-14 border-b border-hairline bg-surface">
         <div className="flex h-full items-center justify-between gap-4 px-4">
           <div className="flex items-center gap-3">
             <button
@@ -47,13 +47,13 @@ export function AppShell({
 
       <div className="flex flex-1">
         {/* Sidebar navigator (wide screens) */}
-        <aside className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-[304px] shrink-0 border-r border-hairline bg-surface shell:block">
+        <aside className="no-print sticky top-14 hidden h-[calc(100vh-3.5rem)] w-[304px] shrink-0 border-r border-hairline bg-surface shell:block">
           <Navigator properties={properties} quarters={quarters} />
         </aside>
 
         {/* Main column */}
         <div className="flex min-w-0 flex-1 flex-col">
-          <div className="sticky top-14 z-20 border-b border-hairline bg-bg/95 px-[clamp(16px,4vw,48px)] py-3 backdrop-blur">
+          <div className="no-print sticky top-14 z-20 border-b border-hairline bg-bg/95 px-[clamp(16px,4vw,48px)] py-3 backdrop-blur">
             <QuarterSelector quarters={quarters} properties={properties} />
           </div>
           <main
@@ -73,7 +73,7 @@ export function AppShell({
       {/* Mobile drawer navigator */}
       <div
         className={cn(
-          "fixed inset-0 z-40 shell:hidden",
+          "no-print fixed inset-0 z-40 shell:hidden",
           drawerOpen ? "pointer-events-auto" : "pointer-events-none",
         )}
         aria-hidden={!drawerOpen}

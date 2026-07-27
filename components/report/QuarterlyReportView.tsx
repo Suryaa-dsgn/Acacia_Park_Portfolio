@@ -41,7 +41,13 @@ export function QuarterlyReportView({ report }: { report: QuarterlyReport }) {
       className="flex flex-col gap-14"
     >
       <Section>
-        <ReportHeader identity={report.identity} meta={report.meta} />
+        <ReportHeader
+          identity={report.identity}
+          meta={report.meta}
+          propertyId={
+            report.scope.kind === "property" ? report.scope.propertyId : ""
+          }
+        />
       </Section>
       <Section>
         <KpiRow report={report} />

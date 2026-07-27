@@ -3,6 +3,7 @@
 // eyebrow, serif property name, and a grid of labeled facts, closed by a
 // hairline. All labels are composed from structured fields (no source em dash).
 import { Eyebrow } from "@/components/primitives/Eyebrow";
+import { ExportBar } from "@/components/report/ExportBar";
 import { periodEyebrow } from "@/lib/report";
 import { count } from "@/lib/format";
 import type { PropertyIdentity, ReportMeta } from "@/lib/types";
@@ -19,16 +20,26 @@ function Fact({ label, children }: { label: string; children: React.ReactNode })
 export function ReportHeader({
   identity,
   meta,
+  propertyId,
 }: {
   identity: PropertyIdentity;
   meta: ReportMeta;
+  propertyId: string;
 }) {
   return (
     <header>
-      <Eyebrow>{periodEyebrow(meta)}</Eyebrow>
-      <h1 className="mt-2 font-serif text-display-lg text-text-serif">
-        {identity.tradeName}
-      </h1>
+      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+        <div>
+          <Eyebrow>{periodEyebrow(meta)}</Eyebrow>
+          <h1 className="mt-2 font-serif text-display-lg text-text-serif">
+            {identity.tradeName}
+          </h1>
+        </div>
+        <ExportBar
+          scope={{ kind: "property", propertyId }}
+          quarter={meta.quarter}
+        />
+      </div>
 
       <dl className="mt-6 grid grid-cols-2 gap-x-8 gap-y-5 md:grid-cols-3">
         <Fact label="Legal Entity">{identity.legalEntity}</Fact>

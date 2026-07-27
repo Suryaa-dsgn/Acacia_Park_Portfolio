@@ -3,6 +3,7 @@
 // portfolio summary: property count, total units, total SF, and the markets.
 // Composed from structured fields, no source em dash.
 import { Eyebrow } from "@/components/primitives/Eyebrow";
+import { ExportBar } from "@/components/report/ExportBar";
 import { periodEyebrow } from "@/lib/report";
 import { count } from "@/lib/format";
 import type { HoldingIdentity, ReportMeta } from "@/lib/types";
@@ -25,10 +26,15 @@ export function HoldingHeader({
 }) {
   return (
     <header>
-      <Eyebrow>{periodEyebrow(meta, "Portfolio Roll-up")}</Eyebrow>
-      <h1 className="mt-2 font-serif text-display-lg text-text-serif">
-        All Holdings
-      </h1>
+      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+        <div>
+          <Eyebrow>{periodEyebrow(meta, "Portfolio Roll-up")}</Eyebrow>
+          <h1 className="mt-2 font-serif text-display-lg text-text-serif">
+            All Holdings
+          </h1>
+        </div>
+        <ExportBar scope={{ kind: "holding" }} quarter={meta.quarter} />
+      </div>
 
       <dl className="mt-6 grid grid-cols-2 gap-x-8 gap-y-5 md:grid-cols-3">
         <Fact label="Properties">{count(identity.propertyCount)}</Fact>

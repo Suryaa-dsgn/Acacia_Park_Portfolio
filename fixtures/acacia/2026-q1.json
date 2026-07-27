@@ -14,10 +14,10 @@
   },
   "identity": {
     "kind": "property",
-    "tradeName": "Universe at Acacia",
+    "tradeName": "Acacia Park Apartments",
     "legalEntity": "Universe at Acacia (DE), LLC",
-    "manager": "Meridian Residential",
-    "addressLine": "5280 N Little Mountain Dr",
+    "manager": "Global Integrity Realty Corporation",
+    "addressLine": "5280 N Little Mountain Drive",
     "cityStateZip": "San Bernardino, CA 92407",
     "submarket": "Inland Empire",
     "units": 304,
@@ -28,32 +28,32 @@
       {
         "key": "rentalIncome",
         "label": "Rental Income",
-        "ptdCurrent": 1650000,
-        "ptdPrior": 1560000,
-        "ytdCurrent": 1650000,
-        "ytdPrior": 1560000,
-        "favorability": "higherIsBetter",
-        "glCode": "4300-0000"
+        "glCode": "4300-0000",
+        "ptdCurrent": 1576855.05,
+        "ptdPrior": 1486385.45,
+        "ytdCurrent": 1576855.05,
+        "ytdPrior": 1486385.45,
+        "favorability": "higherIsBetter"
       },
       {
         "key": "otherResidentIncome",
         "label": "Other Resident Income",
-        "ptdCurrent": 85000,
-        "ptdPrior": 78000,
-        "ytdCurrent": 85000,
-        "ytdPrior": 78000,
-        "favorability": "higherIsBetter",
-        "glCode": "4400-0000"
+        "glCode": "4499-0000",
+        "ptdCurrent": 139360.02,
+        "ptdPrior": 141321.94,
+        "ytdCurrent": 139360.02,
+        "ytdPrior": 141321.94,
+        "favorability": "higherIsBetter"
       },
       {
         "key": "otherPropertyIncome",
         "label": "Other Property Income",
-        "ptdCurrent": 34661.34,
-        "ptdPrior": 31096.26,
-        "ytdCurrent": 34661.34,
-        "ytdPrior": 31096.26,
-        "favorability": "higherIsBetter",
-        "glCode": "4500-0000"
+        "glCode": "4998-0000",
+        "ptdCurrent": 53446.27,
+        "ptdPrior": 41388.87,
+        "ytdCurrent": 53446.27,
+        "ytdPrior": 41388.87,
+        "favorability": "higherIsBetter"
       }
     ],
     "totalIncome": {
@@ -70,82 +70,82 @@
       {
         "key": "fixedExpenses",
         "label": "Fixed Expenses",
-        "ptdCurrent": 174000,
-        "ptdPrior": 150000,
-        "ytdCurrent": 174000,
-        "ytdPrior": 150000,
-        "favorability": "lowerIsBetter",
-        "glCode": "6000-0000"
+        "glCode": "5199-0000",
+        "ptdCurrent": 710510.62,
+        "ptdPrior": 324957.81,
+        "ytdCurrent": 710510.62,
+        "ytdPrior": 324957.81,
+        "favorability": "lowerIsBetter"
       },
       {
         "key": "repairsMaintenance",
         "label": "Repairs & Maintenance",
-        "ptdCurrent": 205000,
-        "ptdPrior": 120000,
-        "ytdCurrent": 205000,
-        "ytdPrior": 120000,
-        "favorability": "lowerIsBetter",
-        "glCode": "6100-0000"
+        "glCode": "5399-0000",
+        "ptdCurrent": 84055.33,
+        "ptdPrior": 49450.18,
+        "ytdCurrent": 84055.33,
+        "ytdPrior": 49450.18,
+        "favorability": "lowerIsBetter"
       },
       {
         "key": "utilities",
         "label": "Utilities",
-        "ptdCurrent": 268000,
-        "ptdPrior": 190000,
-        "ytdCurrent": 268000,
-        "ytdPrior": 190000,
-        "favorability": "lowerIsBetter",
-        "glCode": "6200-0000"
+        "glCode": "5499-0000",
+        "ptdCurrent": 92365.13,
+        "ptdPrior": 92079.71,
+        "ytdCurrent": 92365.13,
+        "ytdPrior": 92079.71,
+        "favorability": "lowerIsBetter"
       },
       {
         "key": "gAndA",
         "label": "General & Administrative",
-        "ptdCurrent": 96000,
-        "ptdPrior": 60000,
-        "ytdCurrent": 96000,
-        "ytdPrior": 60000,
-        "favorability": "lowerIsBetter",
-        "glCode": "6300-0000"
+        "glCode": "6770-9999",
+        "ptdCurrent": 27365.19,
+        "ptdPrior": 20346.42,
+        "ytdCurrent": 27365.19,
+        "ytdPrior": 20346.42,
+        "favorability": "lowerIsBetter"
       },
       {
         "key": "marketing",
         "label": "Marketing",
-        "ptdCurrent": 34000,
-        "ptdPrior": 22000,
-        "ytdCurrent": 34000,
-        "ytdPrior": 22000,
-        "favorability": "lowerIsBetter",
-        "glCode": "6400-0000"
+        "glCode": "6771-9999",
+        "ptdCurrent": 18174.96,
+        "ptdPrior": 12899.31,
+        "ytdCurrent": 18174.96,
+        "ytdPrior": 12899.31,
+        "favorability": "lowerIsBetter"
       },
       {
         "key": "makeReadyTurnover",
         "label": "Make Ready / Turnover",
-        "ptdCurrent": 28000,
-        "ptdPrior": 12000,
-        "ytdCurrent": 28000,
-        "ytdPrior": 12000,
-        "favorability": "lowerIsBetter",
-        "glCode": "6500-0000"
+        "glCode": "6772-9999",
+        "ptdCurrent": 56564.11,
+        "ptdPrior": 97766.28,
+        "ytdCurrent": 56564.11,
+        "ytdPrior": 97766.28,
+        "favorability": "lowerIsBetter"
       },
       {
         "key": "professionalServices",
         "label": "Professional Services",
-        "ptdCurrent": 13456.58,
-        "ptdPrior": 8475.49,
-        "ytdCurrent": 13456.58,
-        "ytdPrior": 8475.49,
-        "favorability": "lowerIsBetter",
-        "glCode": "6600-0000"
+        "glCode": "6776-9999",
+        "ptdCurrent": 86657.89,
+        "ptdPrior": 84330.55,
+        "ytdCurrent": 86657.89,
+        "ytdPrior": 84330.55,
+        "favorability": "lowerIsBetter"
       },
       {
         "key": "payrollLabor",
         "label": "Payroll / Labor",
-        "ptdCurrent": 401000,
-        "ptdPrior": 300000,
-        "ytdCurrent": 401000,
-        "ytdPrior": 300000,
-        "favorability": "lowerIsBetter",
-        "glCode": "6700-0000"
+        "glCode": "6996-0000",
+        "ptdCurrent": 143763.35,
+        "ptdPrior": 180645.23,
+        "ytdCurrent": 143763.35,
+        "ytdPrior": 180645.23,
+        "favorability": "lowerIsBetter"
       }
     ],
     "totalOperatingExpenses": {
@@ -174,7 +174,7 @@
     "totalUnits": 304,
     "occupiedUnits": 291,
     "vacantUnits": 13,
-    "physicalOccupancy": 0.957237,
+    "physicalOccupancy": 0.957236842105263,
     "totalSqFt": 258400,
     "avgUnitSqFt": 850,
     "avgUnitRent": 1811,
@@ -182,26 +182,26 @@
     "avgResidentRent": 1876.95,
     "totalMarketRent": 593657,
     "totalInPlaceRent": 550544,
-    "economicOccupancy": 0.927377
+    "economicOccupancy": 0.927377256563976
   },
   "leasing": {
     "moveIns": 28,
     "moveOuts": 23,
+    "netAbsorption": 5,
     "noticesToVacate": 22,
     "unitsRented": 57,
     "renewals": 48,
-    "evictions": 2,
-    "netAbsorption": 5
+    "evictions": 2
   },
   "occupancySeries": {
     "currentYear": 2026,
     "priorYear": 2025,
     "current": [
-      0.9312,
-      0.9397,
-      0.9402,
-      0.9359,
-      0.9349,
+      0.931239,
+      0.939717,
+      0.940239,
+      0.935904,
+      0.934879,
       null,
       null,
       null,
@@ -211,61 +211,70 @@
       null
     ],
     "prior": [
-      0.921,
-      0.925,
-      0.931,
-      0.938,
-      0.942,
-      0.949,
-      0.951,
-      0.948,
-      0.944,
-      0.939,
-      0.933,
-      0.928
+      0.9635,
+      0.9583,
+      0.9411,
+      0.9315,
+      0.9555,
+      0.9633,
+      0.9492,
+      0.9401,
+      0.9371,
+      0.946,
+      0.9361,
+      0.9461
     ]
   },
   "narrative": [
     {
       "key": "marketCommentary",
       "title": "Market Commentary",
-      "status": "Completed",
-      "body": "Inland Empire demand held firm through the quarter. In-place rents moved up modestly while concessions persisted at the low end of the market. Renewal conversions stayed healthy."
+      "status": "Gathering Info",
+      "body": "Acacia Park Apartments operates in the San Bernardino submarket of the Inland Empire. [Q1 2026 market commentary to be authored / sourced from G2 prose artifact. Carried Q4 2025 baseline: submarket vacancy ~5.1%, 2024 rent growth 2.7%, workforce-housing demand profile.]"
     },
     {
       "key": "propertyOperations",
       "title": "Property Operations",
       "status": "Work in Progress",
-      "body": "Turn times improved after the make-ready backlog cleared in February. A payroll reclassification is under review with the regional team."
+      "body": "[Q1 2026 property operations narrative to be authored. Q1 2026 governed results: Total Income $1,769,661 (+6.0% YoY); Total Operating Expenses $1,219,457 (+41.4% YoY, driven by Fixed/Operating expense category); NOI $550,205 (-31.8% YoY). Physical occupancy 93-94% through May 2026.]"
     },
     {
       "key": "conditionsRenovation",
       "title": "Property Conditions & Renovation Plans",
       "status": "Gathering Info",
-      "body": null
+      "body": "[Q1 2026 capital/renovation narrative to be authored. Q4 2025 baseline noted: 19-building roof replacement completed (20-yr warranty); garage roof project continuing into 2026; rolling interior upgrades on unit turns.]"
     }
   ],
   "images": [
     {
       "slot": "propertyPhoto",
       "url": null,
-      "alt": "Universe at Acacia property photo"
+      "alt": "Acacia Park Apartments property photo"
     },
     {
       "slot": "aerialSiteMap",
       "url": null,
-      "alt": "Universe at Acacia aerial site map"
+      "alt": "Acacia Park Apartments aerial site map"
     }
   ],
   "provenance": [
     {
-      "text": "Governed from Yardi Voyager quarterly export, Q1'26."
+      "text": "All operating-statement figures sourced from MAGNUS governed table PnlSummaryRow (Cash basis), source artifact cmphzk3fy0001a04xdvp5ml8."
     },
     {
-      "text": "Cash basis. 5 quarters retained."
+      "text": "Subtotals and NOI trace to Yardi Income Statement 'Report1' cells: Total Income=B204, Total Expenses=B447, Net Operating Income=B449."
     },
     {
-      "text": "Prior-year comparatives from Q1'25 governed export."
+      "text": "Rent roll figures: MarketRentSchedule (as-of 03/31/2026). Occupancy: OccupancySummaryRow. Leasing: ResidentActivity (Q1 2026)."
+    },
+    {
+      "text": "Period & comparative figures pulled from MAGNUS durable store branch. Entity from CoreAsset. YoY %Δ computed in-cell (live Excel formulas)."
+    },
+    {
+      "text": "Static identity (address, manager, trade name) carried from prior governed quarterly; flagged 'Yardi report header' in Source column."
+    },
+    {
+      "text": "Narrative sections marked for authoring/G2 sourcing; all financial figures are governed and auditable to raw source above."
     }
   ],
   "scope": {

@@ -177,7 +177,7 @@ export interface QuarterlyReport {
   identity: ReportIdentity;
   operatingStatement: OperatingStatement;
   rentRoll: RentRollSummary;
-  leasing: LeasingActivity;
+  leasing: LeasingActivity | null; // null when not governed for the quarter
   occupancySeries: OccupancySeries;
   narrative: NarrativeSection[] | null; // null at holding level
   images: ReportImage[] | null; // null at holding level
