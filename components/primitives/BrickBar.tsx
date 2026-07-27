@@ -47,7 +47,7 @@ export function BrickBar({
         </span>
       )}
       <motion.div
-        className="flex flex-1 items-center"
+        className="flex shrink-0 items-center"
         style={{ gap: 3 }}
         initial="hidden"
         animate="show"
@@ -79,7 +79,7 @@ export function BrickBar({
         })}
       </motion.div>
       {value != null && (
-        <span className="w-28 shrink-0 text-right font-sans text-data tabular text-ink">
+        <span className="w-24 shrink-0 text-right font-sans text-data tabular text-ink">
           {value}
         </span>
       )}

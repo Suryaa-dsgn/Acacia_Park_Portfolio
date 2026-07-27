@@ -22,7 +22,7 @@ export function Leasing({ report }: { report: QuarterlyReport }) {
   }
   return (
     <Panel eyebrow="This quarter" title="Leasing Activity">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6">
         <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3">
           <MetricTile label="Move-Ins" value={count(l.moveIns)} />
           <MetricTile label="Move-Outs" value={count(l.moveOuts)} />

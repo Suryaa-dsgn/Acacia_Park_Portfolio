@@ -139,7 +139,7 @@ export function PortfolioComposition({
               tone={occupancyBand(p.occupancy)}
               fraction={p.noi / maxNoi}
               value={money(p.noi)}
-              cells={30}
+              cells={24}
             />
           ))}
         </div>

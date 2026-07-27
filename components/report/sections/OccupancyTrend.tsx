@@ -20,7 +20,10 @@ export function OccupancyTrend({ report }: { report: QuarterlyReport }) {
   const min = Math.min(...values);
   const max = Math.max(...values);
   const pad = Math.max((max - min) * 0.2, 0.005);
-  const yDomain: [number, number] = [min - pad, max + pad];
+  // snap to 0.5% boundaries so the 5 y-ticks land on clean increments
+  const domainMin = Math.floor((min - pad) * 200) / 200;
+  const domainMax = Math.ceil((max + pad) * 200) / 200;
+  const yDomain: [number, number] = [domainMin, domainMax];
 
   // latest reported current-year month, for the annotation
   let latest = -1;
@@ -40,12 +43,15 @@ export function OccupancyTrend({ report }: { report: QuarterlyReport }) {
       <TrendChart
         xLabels={MONTH_ABBR}
         yDomain={yDomain}
+        height={340}
+        formatY={(n) => `${(n * 100).toFixed(1)}%`}
         series={[
           {
             label: String(s.currentYear),
             color: toneColor("pos"),
             values: s.current,
             dots: true,
+            fillActual: true,
             annotateLatest,
           },
           {

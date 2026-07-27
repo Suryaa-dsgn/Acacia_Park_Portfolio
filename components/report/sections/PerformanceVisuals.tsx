@@ -26,23 +26,23 @@ export function PerformanceVisuals({ report }: { report: QuarterlyReport }) {
   }));
 
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6">
       <Panel eyebrow="Performance" title="Income, Expenses, NOI">
         <div className="flex flex-col gap-4">
-          <BrickBar label="Total Income" tone="pos" fraction={income / scaleMax} value={money(income)} cells={30} />
-          <BrickBar label="Total OpEx" tone="warn" fraction={opex / scaleMax} value={money(opex)} cells={30} />
+          <BrickBar label="Total Income" tone="pos" fraction={income / scaleMax} value={money(income)} cells={24} />
+          <BrickBar label="Total OpEx" tone="warn" fraction={opex / scaleMax} value={money(opex)} cells={24} />
           <BrickBar
             label="Net Operating Income"
             tone={noi >= 0 ? "pos" : "neg"}
             fraction={Math.max(noi, 0) / scaleMax}
             value={money(noi)}
-            cells={30}
+            cells={24}
           />
         </div>
       </Panel>
 
       <Panel eyebrow="Performance" title="Operating Expense Breakdown">
-        <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
+        <div className="flex flex-row flex-wrap items-start gap-6">
           <Waffle segments={segments} cellSize={14} />
           <div className="flex min-w-0 flex-1 flex-col gap-2">
             {segments.map((s) => (
@@ -55,7 +55,7 @@ export function PerformanceVisuals({ report }: { report: QuarterlyReport }) {
             ))}
           </div>
         </div>
-        <p className="mt-5 font-mono text-caption uppercase tracking-[0.08em] text-muted">
+        <p className="mt-6 font-mono text-caption uppercase tracking-[0.08em] text-muted">
           Total OpEx: {money(opexTotal)}
         </p>
       </Panel>
