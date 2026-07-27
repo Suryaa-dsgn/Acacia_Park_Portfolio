@@ -1,7 +1,7 @@
 import { dataSource } from "@/lib/dataSource";
 import { isQuarterSlug, quarterShortLabel } from "@/lib/quarter";
 import { holdingsHref } from "@/lib/nav";
-import { ReportPlaceholder } from "@/components/report/ReportPlaceholder";
+import { QuarterlyReportView } from "@/components/report/QuarterlyReportView";
 import { EmptyState } from "@/components/states/EmptyState";
 import { NotFoundState } from "@/components/states/NotFoundState";
 
@@ -37,5 +37,5 @@ export default async function PropertyPage({
     );
   }
 
-  return <ReportPlaceholder report={report} />;
+  return <QuarterlyReportView report={report} />;
 }

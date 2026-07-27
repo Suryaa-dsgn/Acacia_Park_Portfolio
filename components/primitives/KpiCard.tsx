@@ -9,6 +9,7 @@ import { toneColor, type Tone } from "@/lib/semantic";
 export function KpiCard({
   caption,
   value,
+  yoy,
   sub,
   subTone,
   compact,
@@ -16,6 +17,8 @@ export function KpiCard({
 }: {
   caption: React.ReactNode;
   value: React.ReactNode;
+  // A colored YoY line (arrow + signed percent), tone from favorability (DM 5).
+  yoy?: { label: React.ReactNode; tone: Tone };
   sub?: React.ReactNode;
   subTone?: Tone;
   compact?: boolean;
@@ -38,9 +41,17 @@ export function KpiCard({
       >
         {value}
       </p>
-      {sub != null && (
+      {yoy != null && (
         <p
           className="mt-1.5 font-mono text-caption tabular"
+          style={{ color: toneColor(yoy.tone) }}
+        >
+          {yoy.label}
+        </p>
+      )}
+      {sub != null && (
+        <p
+          className="mt-1 font-mono text-caption tabular"
           style={{ color: subTone ? toneColor(subTone) : "var(--color-text-faint)" }}
         >
           {sub}
