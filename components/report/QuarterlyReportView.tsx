@@ -11,6 +11,7 @@ import { ReportHeader } from "./sections/ReportHeader";
 import { KpiRow } from "./sections/KpiRow";
 import { OperatingStatement } from "./sections/OperatingStatement";
 import { PerformanceVisuals } from "./sections/PerformanceVisuals";
+import { Ratios } from "./sections/Ratios";
 import { RentRoll } from "./sections/RentRoll";
 import { Leasing } from "./sections/Leasing";
 import { OccupancyTrend } from "./sections/OccupancyTrend";
@@ -28,6 +29,9 @@ export function QuarterlyReportView({ report }: { report: QuarterlyReport }) {
     // variant is rendered by its own view in a later phase.
     return null;
   }
+
+  const propertyId =
+    report.scope.kind === "property" ? report.scope.propertyId : "";
 
   const Section = ({ children }: { children: React.ReactNode }) => (
     <motion.section variants={item}>{children}</motion.section>
@@ -59,6 +63,9 @@ export function QuarterlyReportView({ report }: { report: QuarterlyReport }) {
         <PerformanceVisuals report={report} />
       </Section>
       <Section>
+        <Ratios report={report} />
+      </Section>
+      <Section>
         <RentRoll report={report} />
       </Section>
       <Section>
@@ -69,12 +76,20 @@ export function QuarterlyReportView({ report }: { report: QuarterlyReport }) {
       </Section>
       {report.narrative && (
         <Section>
-          <Narrative sections={report.narrative} />
+          <Narrative
+            sections={report.narrative}
+            propertyId={propertyId}
+            quarter={report.meta.quarter}
+          />
         </Section>
       )}
       {report.images && (
         <Section>
-          <PropertyImages images={report.images} />
+          <PropertyImages
+            images={report.images}
+            propertyId={propertyId}
+            quarter={report.meta.quarter}
+          />
         </Section>
       )}
       <Section>

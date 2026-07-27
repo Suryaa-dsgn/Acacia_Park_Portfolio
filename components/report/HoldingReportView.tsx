@@ -11,6 +11,7 @@ import { HoldingHeader } from "./sections/HoldingHeader";
 import { KpiRow } from "./sections/KpiRow";
 import { OperatingStatement } from "./sections/OperatingStatement";
 import { PerformanceVisuals } from "./sections/PerformanceVisuals";
+import { Ratios } from "./sections/Ratios";
 import { RentRoll } from "./sections/RentRoll";
 import { Leasing } from "./sections/Leasing";
 import { OccupancyTrend } from "./sections/OccupancyTrend";
@@ -48,6 +49,9 @@ export function HoldingReportView({ report }: { report: QuarterlyReport }) {
       </Section>
       <Section>
         <PerformanceVisuals report={report} />
+      </Section>
+      <Section>
+        <Ratios report={report} />
       </Section>
       <Section>
         <RentRoll report={report} />

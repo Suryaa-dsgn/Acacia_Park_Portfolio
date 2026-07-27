@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/cn";
-import { parseRoute, hrefForScope } from "@/lib/nav";
+import { parseRoute, sectionHref } from "@/lib/nav";
 import { quarterShortLabel } from "@/lib/quarter";
 import type { PropertyListItem, QuarterId } from "@/lib/types";
 
@@ -24,23 +24,26 @@ export function QuarterSelector({
   const router = useRouter();
   const pathname = usePathname();
   const reduced = useReducedMotion();
-  const { scope, quarter } = parseRoute(pathname);
+  const route = parseRoute(pathname);
+  const { scope, quarter } = route;
   const chipRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  // Which quarters have a governed report for the current scope.
+  // Which quarters have a governed report for the current scope. Property scope
+  // uses that property's quarters; holding, signal, and compare are portfolio
+  // wide (any quarter at least one property reports).
   const available = new Set<QuarterId>();
   if (scope?.kind === "property") {
     const p = properties.find((x) => x.propertyId === scope.propertyId);
     p?.availableQuarters.forEach((q) => available.add(q));
   } else {
-    // holding: any quarter at least one property reports
     for (const p of properties)
       p.availableQuarters.forEach((q) => available.add(q));
   }
 
   function go(q: QuarterId) {
-    if (!scope || !available.has(q)) return;
-    router.push(hrefForScope(scope, q));
+    if (!available.has(q)) return;
+    const href = sectionHref(route, q);
+    if (href) router.push(href);
   }
 
   function onKeyDown(e: React.KeyboardEvent, index: number) {

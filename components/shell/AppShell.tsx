@@ -12,6 +12,7 @@ import { Footer } from "./Footer";
 import { Navigator } from "./Navigator";
 import { QuarterSelector } from "./QuarterSelector";
 import { ThemeToggle } from "./ThemeToggle";
+import { TopNav } from "./TopNav";
 import { Icon } from "@/components/primitives/Icon";
 import type { PropertyListItem, QuarterId } from "@/lib/types";
 
@@ -41,7 +42,12 @@ export function AppShell({
             </button>
             <BrandLockup />
           </div>
-          <ThemeToggle />
+          <div className="flex items-center gap-4">
+            <div className="hidden shell:block">
+              <TopNav quarters={quarters} />
+            </div>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
