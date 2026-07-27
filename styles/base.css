@@ -106,3 +106,13 @@ body,
     --color-info-soft: var(--color-panel-raised);
   }
 }
+
+/* Higher contrast: make hairlines read as defined borders and lift muted text
+   toward the body ink (DG 7.4). */
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: var(--color-border-strong);
+    --color-text-muted: var(--color-text);
+    --color-text-faint: var(--color-text-muted);
+  }
+}

@@ -112,9 +112,18 @@ export function DataTable<T>({
                 <tr
                   key={rowKey(row)}
                   onClick={() => href && router.push(href)}
+                  onKeyDown={(e) => {
+                    if (href && (e.key === "Enter" || e.key === " ")) {
+                      e.preventDefault();
+                      router.push(href);
+                    }
+                  }}
+                  role={linkable ? "link" : undefined}
+                  tabIndex={linkable ? 0 : undefined}
                   className={cn(
                     "border-b border-hairline transition-colors duration-[120ms]",
-                    linkable && "cursor-pointer hover:bg-panel-raised",
+                    linkable &&
+                      "cursor-pointer hover:bg-panel-raised focus-visible:bg-panel-raised focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[color:var(--color-accent)]",
                   )}
                 >
                   {columns.map((c) => (

@@ -21,7 +21,7 @@
   --color-text-serif: #f2efe3; /* headlines, warm white */
   --color-text: #ece8db; /* body and data */
   --color-text-muted: #9a9e91;
-  --color-text-faint: #6d7267;
+  --color-text-faint: #787d71; /* WCAG AA on ground (4.6:1) */
 
   /* interactive accent (eyebrows, links, active nav) */
   --color-accent: #7fc7a6;
@@ -76,17 +76,17 @@
   --color-text-serif: #14201a; /* deep green-black */
   --color-text: #22302a;
   --color-text-muted: #5f675b;
-  --color-text-faint: #8b9083;
+  --color-text-faint: #6a6d64; /* WCAG AA on paper (4.7:1) */
 
   /* interactive accent */
-  --color-accent: #2f7d5b;
+  --color-accent: #2e7a59; /* AA for eyebrows/links (4.6:1) */
   --color-accent-strong: #226146;
 
-  /* semantic four, darkened for contrast on paper */
-  --color-pos: #2f8a5f;
-  --color-warn: #a8791f;
-  --color-neg: #b6553a;
-  --color-info: #4750a3;
+  /* semantic four, darkened so colored VALUES (not just marks) pass AA on paper */
+  --color-pos: #2a7b55; /* 4.6:1 */
+  --color-warn: #8d661a; /* 4.6:1 */
+  --color-neg: #af5238; /* 4.6:1 */
+  --color-info: #4750a3; /* 6.4:1 */
 
   /* soft fills */
   --color-pos-soft: rgba(47, 138, 95, 0.12);
