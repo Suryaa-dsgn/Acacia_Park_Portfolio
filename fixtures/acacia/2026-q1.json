@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "quarter": "2026-q1",
+    "quarterLabel": "Q1'26",
+    "fiscalYear": 2026,
+    "quarterNumber": 1,
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "priorPeriodStart": "2025-01-01",
+    "priorPeriodEnd": "2025-03-31",
+    "accountingBasis": "Cash",
+    "rentRollAsOf": "2026-03-31",
+    "generatedAt": "2026-04-15T09:00:00Z"
+  },
+  "identity": {
+    "kind": "property",
+    "tradeName": "Universe at Acacia",
+    "legalEntity": "Universe at Acacia (DE), LLC",
+    "manager": "Meridian Residential",
+    "addressLine": "5280 N Little Mountain Dr",
+    "cityStateZip": "San Bernardino, CA 92407",
+    "submarket": "Inland Empire",
+    "units": 304,
+    "totalSqFt": 258400
+  },
+  "operatingStatement": {
+    "income": [
+      {
+        "key": "rentalIncome",
+        "label": "Rental Income",
+        "ptdCurrent": 1650000,
+        "ptdPrior": 1560000,
+        "ytdCurrent": 1650000,
+        "ytdPrior": 1560000,
+        "favorability": "higherIsBetter",
+        "glCode": "4300-0000"
+      },
+      {
+        "key": "otherResidentIncome",
+        "label": "Other Resident Income",
+        "ptdCurrent": 85000,
+        "ptdPrior": 78000,
+        "ytdCurrent": 85000,
+        "ytdPrior": 78000,
+        "favorability": "higherIsBetter",
+        "glCode": "4400-0000"
+      },
+      {
+        "key": "otherPropertyIncome",
+        "label": "Other Property Income",
+        "ptdCurrent": 34661.34,
+        "ptdPrior": 31096.26,
+        "ytdCurrent": 34661.34,
+        "ytdPrior": 31096.26,
+        "favorability": "higherIsBetter",
+        "glCode": "4500-0000"
+      }
+    ],
+    "totalIncome": {
+      "key": "totalIncome",
+      "label": "Total Income",
+      "ptdCurrent": 1769661.34,
+      "ptdPrior": 1669096.26,
+      "ytdCurrent": 1769661.34,
+      "ytdPrior": 1669096.26,
+      "favorability": "higherIsBetter",
+      "isSubtotal": true
+    },
+    "expenses": [
+      {
+        "key": "fixedExpenses",
+        "label": "Fixed Expenses",
+        "ptdCurrent": 174000,
+        "ptdPrior": 150000,
+        "ytdCurrent": 174000,
+        "ytdPrior": 150000,
+        "favorability": "lowerIsBetter",
+        "glCode": "6000-0000"
+      },
+      {
+        "key": "repairsMaintenance",
+        "label": "Repairs & Maintenance",
+        "ptdCurrent": 205000,
+        "ptdPrior": 120000,
+        "ytdCurrent": 205000,
+        "ytdPrior": 120000,
+        "favorability": "lowerIsBetter",
+        "glCode": "6100-0000"
+      },
+      {
+        "key": "utilities",
+        "label": "Utilities",
+        "ptdCurrent": 268000,
+        "ptdPrior": 190000,
+        "ytdCurrent": 268000,
+        "ytdPrior": 190000,
+        "favorability": "lowerIsBetter",
+        "glCode": "6200-0000"
+      },
+      {
+        "key": "gAndA",
+        "label": "General & Administrative",
+        "ptdCurrent": 96000,
+        "ptdPrior": 60000,
+        "ytdCurrent": 96000,
+        "ytdPrior": 60000,
+        "favorability": "lowerIsBetter",
+        "glCode": "6300-0000"
+      },
+      {
+        "key": "marketing",
+        "label": "Marketing",
+        "ptdCurrent": 34000,
+        "ptdPrior": 22000,
+        "ytdCurrent": 34000,
+        "ytdPrior": 22000,
+        "favorability": "lowerIsBetter",
+        "glCode": "6400-0000"
+      },
+      {
+        "key": "makeReadyTurnover",
+        "label": "Make Ready / Turnover",
+        "ptdCurrent": 28000,
+        "ptdPrior": 12000,
+        "ytdCurrent": 28000,
+        "ytdPrior": 12000,
+        "favorability": "lowerIsBetter",
+        "glCode": "6500-0000"
+      },
+      {
+        "key": "professionalServices",
+        "label": "Professional Services",
+        "ptdCurrent": 13456.58,
+        "ptdPrior": 8475.49,
+        "ytdCurrent": 13456.58,
+        "ytdPrior": 8475.49,
+        "favorability": "lowerIsBetter",
+        "glCode": "6600-0000"
+      },
+      {
+        "key": "payrollLabor",
+        "label": "Payroll / Labor",
+        "ptdCurrent": 401000,
+        "ptdPrior": 300000,
+        "ytdCurrent": 401000,
+        "ytdPrior": 300000,
+        "favorability": "lowerIsBetter",
+        "glCode": "6700-0000"
+      }
+    ],
+    "totalOperatingExpenses": {
+      "key": "totalOperatingExpenses",
+      "label": "Total Operating Expenses",
+      "ptdCurrent": 1219456.58,
+      "ptdPrior": 862475.49,
+      "ytdCurrent": 1219456.58,
+      "ytdPrior": 862475.49,
+      "favorability": "lowerIsBetter",
+      "isSubtotal": true
+    },
+    "netOperatingIncome": {
+      "key": "netOperatingIncome",
+      "label": "Net Operating Income",
+      "ptdCurrent": 550204.76,
+      "ptdPrior": 806620.77,
+      "ytdCurrent": 550204.76,
+      "ytdPrior": 806620.77,
+      "favorability": "higherIsBetter",
+      "isResult": true
+    }
+  },
+  "rentRoll": {
+    "asOf": "2026-03-31",
+    "totalUnits": 304,
+    "occupiedUnits": 291,
+    "vacantUnits": 13,
+    "physicalOccupancy": 0.957237,
+    "totalSqFt": 258400,
+    "avgUnitSqFt": 850,
+    "avgUnitRent": 1811,
+    "avgOccupiedUnitRent": 1952.81,
+    "avgResidentRent": 1876.95,
+    "totalMarketRent": 593657,
+    "totalInPlaceRent": 550544,
+    "economicOccupancy": 0.927377
+  },
+  "leasing": {
+    "moveIns": 28,
+    "moveOuts": 23,
+    "noticesToVacate": 22,
+    "unitsRented": 57,
+    "renewals": 48,
+    "evictions": 2,
+    "netAbsorption": 5
+  },
+  "occupancySeries": {
+    "currentYear": 2026,
+    "priorYear": 2025,
+    "current": [
+      0.9312,
+      0.9397,
+      0.9402,
+      0.9359,
+      0.9349,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "prior": [
+      0.921,
+      0.925,
+      0.931,
+      0.938,
+      0.942,
+      0.949,
+      0.951,
+      0.948,
+      0.944,
+      0.939,
+      0.933,
+      0.928
+    ]
+  },
+  "narrative": [
+    {
+      "key": "marketCommentary",
+      "title": "Market Commentary",
+      "status": "Completed",
+      "body": "Inland Empire demand held firm through the quarter. In-place rents moved up modestly while concessions persisted at the low end of the market. Renewal conversions stayed healthy."
+    },
+    {
+      "key": "propertyOperations",
+      "title": "Property Operations",
+      "status": "Work in Progress",
+      "body": "Turn times improved after the make-ready backlog cleared in February. A payroll reclassification is under review with the regional team."
+    },
+    {
+      "key": "conditionsRenovation",
+      "title": "Property Conditions & Renovation Plans",
+      "status": "Gathering Info",
+      "body": null
+    }
+  ],
+  "images": [
+    {
+      "slot": "propertyPhoto",
+      "url": null,
+      "alt": "Universe at Acacia property photo"
+    },
+    {
+      "slot": "aerialSiteMap",
+      "url": null,
+      "alt": "Universe at Acacia aerial site map"
+    }
+  ],
+  "provenance": [
+    {
+      "text": "Governed from Yardi Voyager quarterly export, Q1'26."
+    },
+    {
+      "text": "Cash basis. 5 quarters retained."
+    },
+    {
+      "text": "Prior-year comparatives from Q1'25 governed export."
+    }
+  ],
+  "scope": {
+    "kind": "property",
+    "propertyId": "acacia"
+  }
+}

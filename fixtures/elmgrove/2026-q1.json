@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "quarter": "2026-q1",
+    "quarterLabel": "Q1'26",
+    "fiscalYear": 2026,
+    "quarterNumber": 1,
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "priorPeriodStart": "2025-01-01",
+    "priorPeriodEnd": "2025-03-31",
+    "accountingBasis": "Cash",
+    "rentRollAsOf": "2026-03-31",
+    "generatedAt": "2026-04-15T09:00:00Z"
+  },
+  "identity": {
+    "kind": "property",
+    "tradeName": "Elm Grove Residences",
+    "legalEntity": "Elm Grove Residences (NC), LLC",
+    "manager": "Meridian Residential",
+    "addressLine": "6300 Falls of Neuse Rd",
+    "cityStateZip": "Raleigh, NC 27615",
+    "submarket": "North Raleigh",
+    "units": 275,
+    "totalSqFt": 233750
+  },
+  "operatingStatement": {
+    "income": [
+      {
+        "key": "rentalIncome",
+        "label": "Rental Income",
+        "ptdCurrent": 990000,
+        "ptdPrior": 935550,
+        "ytdCurrent": 990000,
+        "ytdPrior": 935550,
+        "favorability": "higherIsBetter",
+        "glCode": "4300-0000"
+      },
+      {
+        "key": "otherResidentIncome",
+        "label": "Other Resident Income",
+        "ptdCurrent": 48000,
+        "ptdPrior": 45360,
+        "ytdCurrent": 48000,
+        "ytdPrior": 45360,
+        "favorability": "higherIsBetter",
+        "glCode": "4400-0000"
+      },
+      {
+        "key": "otherPropertyIncome",
+        "label": "Other Property Income",
+        "ptdCurrent": 20000,
+        "ptdPrior": 18900,
+        "ytdCurrent": 20000,
+        "ytdPrior": 18900,
+        "favorability": "higherIsBetter",
+        "glCode": "4500-0000"
+      }
+    ],
+    "totalIncome": {
+      "key": "totalIncome",
+      "label": "Total Income",
+      "ptdCurrent": 1058000,
+      "ptdPrior": 999810,
+      "ytdCurrent": 1058000,
+      "ytdPrior": 999810,
+      "favorability": "higherIsBetter",
+      "isSubtotal": true
+    },
+    "expenses": [
+      {
+        "key": "fixedExpenses",
+        "label": "Fixed Expenses",
+        "ptdCurrent": 130000,
+        "ptdPrior": 117650,
+        "ytdCurrent": 130000,
+        "ytdPrior": 117650,
+        "favorability": "lowerIsBetter",
+        "glCode": "6000-0000"
+      },
+      {
+        "key": "repairsMaintenance",
+        "label": "Repairs & Maintenance",
+        "ptdCurrent": 88000,
+        "ptdPrior": 79640,
+        "ytdCurrent": 88000,
+        "ytdPrior": 79640,
+        "favorability": "lowerIsBetter",
+        "glCode": "6100-0000"
+      },
+      {
+        "key": "utilities",
+        "label": "Utilities",
+        "ptdCurrent": 110000,
+        "ptdPrior": 99550,
+        "ytdCurrent": 110000,
+        "ytdPrior": 99550,
+        "favorability": "lowerIsBetter",
+        "glCode": "6200-0000"
+      },
+      {
+        "key": "gAndA",
+        "label": "General & Administrative",
+        "ptdCurrent": 44000,
+        "ptdPrior": 39820,
+        "ytdCurrent": 44000,
+        "ytdPrior": 39820,
+        "favorability": "lowerIsBetter",
+        "glCode": "6300-0000"
+      },
+      {
+        "key": "marketing",
+        "label": "Marketing",
+        "ptdCurrent": 26000,
+        "ptdPrior": 23530,
+        "ytdCurrent": 26000,
+        "ytdPrior": 23530,
+        "favorability": "lowerIsBetter",
+        "glCode": "6400-0000"
+      },
+      {
+        "key": "makeReadyTurnover",
+        "label": "Make Ready / Turnover",
+        "ptdCurrent": 16000,
+        "ptdPrior": 14480,
+        "ytdCurrent": 16000,
+        "ytdPrior": 14480,
+        "favorability": "lowerIsBetter",
+        "glCode": "6500-0000"
+      },
+      {
+        "key": "professionalServices",
+        "label": "Professional Services",
+        "ptdCurrent": 7000,
+        "ptdPrior": 6335,
+        "ytdCurrent": 7000,
+        "ytdPrior": 6335,
+        "favorability": "lowerIsBetter",
+        "glCode": "6600-0000"
+      },
+      {
+        "key": "payrollLabor",
+        "label": "Payroll / Labor",
+        "ptdCurrent": 175000,
+        "ptdPrior": 158375,
+        "ytdCurrent": 175000,
+        "ytdPrior": 158375,
+        "favorability": "lowerIsBetter",
+        "glCode": "6700-0000"
+      }
+    ],
+    "totalOperatingExpenses": {
+      "key": "totalOperatingExpenses",
+      "label": "Total Operating Expenses",
+      "ptdCurrent": 596000,
+      "ptdPrior": 539380,
+      "ytdCurrent": 596000,
+      "ytdPrior": 539380,
+      "favorability": "lowerIsBetter",
+      "isSubtotal": true
+    },
+    "netOperatingIncome": {
+      "key": "netOperatingIncome",
+      "label": "Net Operating Income",
+      "ptdCurrent": 462000,
+      "ptdPrior": 460430,
+      "ytdCurrent": 462000,
+      "ytdPrior": 460430,
+      "favorability": "higherIsBetter",
+      "isResult": true
+    }
+  },
+  "rentRoll": {
+    "asOf": "2026-03-31",
+    "totalUnits": 275,
+    "occupiedUnits": 261,
+    "vacantUnits": 14,
+    "physicalOccupancy": 0.949091,
+    "totalSqFt": 233750,
+    "avgUnitSqFt": 850,
+    "avgUnitRent": 1396,
+    "avgOccupiedUnitRent": 1471,
+    "avgResidentRent": 1440,
+    "totalMarketRent": 412000,
+    "totalInPlaceRent": 384000,
+    "economicOccupancy": 0.932039
+  },
+  "leasing": {
+    "moveIns": 22,
+    "moveOuts": 19,
+    "noticesToVacate": 18,
+    "unitsRented": 30,
+    "renewals": 26,
+    "evictions": 1,
+    "netAbsorption": 3
+  },
+  "occupancySeries": {
+    "currentYear": 2026,
+    "priorYear": 2025,
+    "current": [
+      0.945,
+      0.947,
+      0.948,
+      0.949,
+      0.951,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "prior": [
+      0.939,
+      0.941,
+      0.943,
+      0.944,
+      0.946,
+      0.948,
+      0.949,
+      0.948,
+      0.947,
+      0.946,
+      0.945,
+      0.944
+    ]
+  },
+  "narrative": [
+    {
+      "key": "marketCommentary",
+      "title": "Market Commentary",
+      "status": "Completed",
+      "body": "North Raleigh fundamentals firm. Employment growth continues to support demand across the submarket."
+    },
+    {
+      "key": "propertyOperations",
+      "title": "Property Operations",
+      "status": "Work in Progress",
+      "body": "Staffing back to full after a Q4 vacancy. Renewal outreach cadence being tightened."
+    },
+    {
+      "key": "conditionsRenovation",
+      "title": "Property Conditions & Renovation Plans",
+      "status": "Gathering Info",
+      "body": null
+    }
+  ],
+  "images": [
+    {
+      "slot": "propertyPhoto",
+      "url": null,
+      "alt": "Elm Grove Residences property photo"
+    },
+    {
+      "slot": "aerialSiteMap",
+      "url": null,
+      "alt": "Elm Grove Residences aerial site map"
+    }
+  ],
+  "provenance": [
+    {
+      "text": "Governed from Yardi Voyager quarterly export, Q1'26."
+    },
+    {
+      "text": "Cash basis. 5 quarters retained."
+    },
+    {
+      "text": "Prior-year comparatives from Q1'25 governed export."
+    }
+  ],
+  "scope": {
+    "kind": "property",
+    "propertyId": "elmgrove"
+  }
+}

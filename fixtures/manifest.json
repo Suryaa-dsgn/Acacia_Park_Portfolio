@@ -1,0 +1,62 @@
+{
+  "quarters": [
+    "2025-q4",
+    "2026-q1"
+  ],
+  "properties": [
+    {
+      "propertyId": "acacia",
+      "tradeName": "Universe at Acacia",
+      "city": "San Bernardino",
+      "state": "CA",
+      "availableQuarters": [
+        "2025-q4",
+        "2026-q1"
+      ],
+      "latestNoi": 550204.76
+    },
+    {
+      "propertyId": "brightwater",
+      "tradeName": "Brightwater Commons",
+      "city": "Austin",
+      "state": "TX",
+      "availableQuarters": [
+        "2025-q4",
+        "2026-q1"
+      ],
+      "latestNoi": 540000
+    },
+    {
+      "propertyId": "cedarfield",
+      "tradeName": "Cedarfield Flats",
+      "city": "Denver",
+      "state": "CO",
+      "availableQuarters": [
+        "2025-q4",
+        "2026-q1"
+      ],
+      "latestNoi": 351000
+    },
+    {
+      "propertyId": "dunmore",
+      "tradeName": "Dunmore Yards",
+      "city": "Columbus",
+      "state": "OH",
+      "availableQuarters": [
+        "2025-q4",
+        "2026-q1"
+      ],
+      "latestNoi": 583000
+    },
+    {
+      "propertyId": "elmgrove",
+      "tradeName": "Elm Grove Residences",
+      "city": "Raleigh",
+      "state": "NC",
+      "availableQuarters": [
+        "2026-q1"
+      ],
+      "latestNoi": 462000
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "quarter": "2025-q4",
+    "quarterLabel": "Q4'25",
+    "fiscalYear": 2025,
+    "quarterNumber": 4,
+    "periodStart": "2025-10-01",
+    "periodEnd": "2025-12-31",
+    "priorPeriodStart": "2024-10-01",
+    "priorPeriodEnd": "2024-12-31",
+    "accountingBasis": "Cash",
+    "rentRollAsOf": "2025-12-31",
+    "generatedAt": "2026-01-15T09:00:00Z"
+  },
+  "identity": {
+    "kind": "property",
+    "tradeName": "Brightwater Commons",
+    "legalEntity": "Brightwater Commons (TX), LLC",
+    "manager": "Meridian Residential",
+    "addressLine": "1400 Wells Branch Pkwy",
+    "cityStateZip": "Austin, TX 78728",
+    "submarket": "North Austin",
+    "units": 218,
+    "totalSqFt": 191000
+  },
+  "operatingStatement": {
+    "income": [
+      {
+        "key": "rentalIncome",
+        "label": "Rental Income",
+        "ptdCurrent": 1127000,
+        "ptdPrior": 1065015,
+        "ytdCurrent": 4508000,
+        "ytdPrior": 4260060,
+        "favorability": "higherIsBetter",
+        "glCode": "4300-0000"
+      },
+      {
+        "key": "otherResidentIncome",
+        "label": "Other Resident Income",
+        "ptdCurrent": 58800,
+        "ptdPrior": 55566,
+        "ytdCurrent": 235200,
+        "ytdPrior": 222264,
+        "favorability": "higherIsBetter",
+        "glCode": "4400-0000"
+      },
+      {
+        "key": "otherPropertyIncome",
+        "label": "Other Property Income",
+        "ptdCurrent": 21560,
+        "ptdPrior": 20374.2,
+        "ytdCurrent": 86240,
+        "ytdPrior": 81496.8,
+        "favorability": "higherIsBetter",
+        "glCode": "4500-0000"
+      }
+    ],
+    "totalIncome": {
+      "key": "totalIncome",
+      "label": "Total Income",
+      "ptdCurrent": 1207360,
+      "ptdPrior": 1140955.2,
+      "ytdCurrent": 4829440,
+      "ytdPrior": 4563820.8,
+      "favorability": "higherIsBetter",
+      "isSubtotal": true
+    },
+    "expenses": [
+      {
+        "key": "fixedExpenses",
+        "label": "Fixed Expenses",
+        "ptdCurrent": 148500,
+        "ptdPrior": 134392.5,
+        "ytdCurrent": 594000,
+        "ytdPrior": 537570,
+        "favorability": "lowerIsBetter",
+        "glCode": "6000-0000"
+      },
+      {
+        "key": "repairsMaintenance",
+        "label": "Repairs & Maintenance",
+        "ptdCurrent": 95040,
+        "ptdPrior": 86011.2,
+        "ytdCurrent": 380160,
+        "ytdPrior": 344044.8,
+        "favorability": "lowerIsBetter",
+        "glCode": "6100-0000"
+      },
+      {
+        "key": "utilities",
+        "label": "Utilities",
+        "ptdCurrent": 130680,
+        "ptdPrior": 118265.4,
+        "ytdCurrent": 522720,
+        "ytdPrior": 473061.6,
+        "favorability": "lowerIsBetter",
+        "glCode": "6200-0000"
+      },
+      {
+        "key": "gAndA",
+        "label": "General & Administrative",
+        "ptdCurrent": 47520,
+        "ptdPrior": 43005.6,
+        "ytdCurrent": 190080,
+        "ytdPrior": 172022.4,
+        "favorability": "lowerIsBetter",
+        "glCode": "6300-0000"
+      },
+      {
+        "key": "marketing",
+        "label": "Marketing",
+        "ptdCurrent": 29700,
+        "ptdPrior": 26878.5,
+        "ytdCurrent": 118800,
+        "ytdPrior": 107514,
+        "favorability": "lowerIsBetter",
+        "glCode": "6400-0000"
+      },
+      {
+        "key": "makeReadyTurnover",
+        "label": "Make Ready / Turnover",
+        "ptdCurrent": 17820,
+        "ptdPrior": 16127.1,
+        "ytdCurrent": 71280,
+        "ytdPrior": 64508.4,
+        "favorability": "lowerIsBetter",
+        "glCode": "6500-0000"
+      },
+      {
+        "key": "professionalServices",
+        "label": "Professional Services",
+        "ptdCurrent": 7920,
+        "ptdPrior": 7167.6,
+        "ytdCurrent": 31680,
+        "ytdPrior": 28670.4,
+        "favorability": "lowerIsBetter",
+        "glCode": "6600-0000"
+      },
+      {
+        "key": "payrollLabor",
+        "label": "Payroll / Labor",
+        "ptdCurrent": 207900,
+        "ptdPrior": 188149.5,
+        "ytdCurrent": 831600,
+        "ytdPrior": 752598,
+        "favorability": "lowerIsBetter",
+        "glCode": "6700-0000"
+      }
+    ],
+    "totalOperatingExpenses": {
+      "key": "totalOperatingExpenses",
+      "label": "Total Operating Expenses",
+      "ptdCurrent": 685080,
+      "ptdPrior": 619997.4,
+      "ytdCurrent": 2740320,
+      "ytdPrior": 2479989.6,
+      "favorability": "lowerIsBetter",
+      "isSubtotal": true
+    },
+    "netOperatingIncome": {
+      "key": "netOperatingIncome",
+      "label": "Net Operating Income",
+      "ptdCurrent": 522280,
+      "ptdPrior": 520957.8,
+      "ytdCurrent": 2089120,
+      "ytdPrior": 2083831.2,
+      "favorability": "higherIsBetter",
+      "isResult": true
+    }
+  },
+  "rentRoll": {
+    "asOf": "2025-12-31",
+    "totalUnits": 218,
+    "occupiedUnits": 210,
+    "vacantUnits": 8,
+    "physicalOccupancy": 0.963303,
+    "totalSqFt": 191000,
+    "avgUnitSqFt": 876,
+    "avgUnitRent": 1545.28,
+    "avgOccupiedUnitRent": 1604.14,
+    "avgResidentRent": 1574.1,
+    "totalMarketRent": 356400,
+    "totalInPlaceRent": 336870,
+    "economicOccupancy": 0.945202
+  },
+  "leasing": {
+    "moveIns": 19,
+    "moveOuts": 14,
+    "netAbsorption": 5,
+    "noticesToVacate": 11,
+    "unitsRented": 32,
+    "renewals": 29,
+    "evictions": 0
+  },
+  "occupancySeries": {
+    "currentYear": 2025,
+    "priorYear": 2024,
+    "current": [
+      0.958,
+      0.961,
+      0.964,
+      0.966,
+      0.969,
+      0.971,
+      0.973,
+      0.972,
+      0.97,
+      0.967,
+      0.963,
+      0.96
+    ],
+    "prior": [
+      0.9484,
+      0.9514,
+      0.9544,
+      0.9563,
+      0.9593,
+      0.9613,
+      0.9633,
+      0.9623,
+      0.9603,
+      0.9573,
+      0.9534,
+      0.9504
+    ]
+  },
+  "narrative": [
+    {
+      "key": "marketCommentary",
+      "title": "Market Commentary",
+      "status": "Completed",
+      "body": "Prior quarter market commentary, finalized."
+    },
+    {
+      "key": "propertyOperations",
+      "title": "Property Operations",
+      "status": "Completed",
+      "body": "Prior quarter operations summary, finalized."
+    },
+    {
+      "key": "conditionsRenovation",
+      "title": "Property Conditions & Renovation Plans",
+      "status": "Completed",
+      "body": "Prior quarter conditions and renovation notes, finalized."
+    }
+  ],
+  "images": [
+    {
+      "slot": "propertyPhoto",
+      "url": null,
+      "alt": "Brightwater Commons property photo"
+    },
+    {
+      "slot": "aerialSiteMap",
+      "url": null,
+      "alt": "Brightwater Commons aerial site map"
+    }
+  ],
+  "provenance": [
+    {
+      "text": "Governed from Yardi Voyager quarterly export, Q4'25."
+    },
+    {
+      "text": "Cash basis. 5 quarters retained."
+    },
+    {
+      "text": "Prior-year comparatives from Q4'24 governed export."
+    }
+  ],
+  "scope": {
+    "kind": "property",
+    "propertyId": "brightwater"
+  }
+}

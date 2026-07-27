@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "quarter": "2025-q4",
+    "quarterLabel": "Q4'25",
+    "fiscalYear": 2025,
+    "quarterNumber": 4,
+    "periodStart": "2025-10-01",
+    "periodEnd": "2025-12-31",
+    "priorPeriodStart": "2024-10-01",
+    "priorPeriodEnd": "2024-12-31",
+    "accountingBasis": "Cash",
+    "rentRollAsOf": "2025-12-31",
+    "generatedAt": "2026-01-15T09:00:00Z"
+  },
+  "identity": {
+    "kind": "property",
+    "tradeName": "Cedarfield Flats",
+    "legalEntity": "Cedarfield Flats (CO), LLC",
+    "manager": "Aspen Peak Management",
+    "addressLine": "8800 E Hampden Ave",
+    "cityStateZip": "Denver, CO 80231",
+    "submarket": "Southeast Denver",
+    "units": 156,
+    "totalSqFt": 132600
+  },
+  "operatingStatement": {
+    "income": [
+      {
+        "key": "rentalIncome",
+        "label": "Rental Income",
+        "ptdCurrent": 705600,
+        "ptdPrior": 666792,
+        "ytdCurrent": 2822400,
+        "ytdPrior": 2667168,
+        "favorability": "higherIsBetter",
+        "glCode": "4300-0000"
+      },
+      {
+        "key": "otherResidentIncome",
+        "label": "Other Resident Income",
+        "ptdCurrent": 33320,
+        "ptdPrior": 31487.4,
+        "ytdCurrent": 133280,
+        "ytdPrior": 125949.6,
+        "favorability": "higherIsBetter",
+        "glCode": "4400-0000"
+      },
+      {
+        "key": "otherPropertyIncome",
+        "label": "Other Property Income",
+        "ptdCurrent": 13720,
+        "ptdPrior": 12965.4,
+        "ytdCurrent": 54880,
+        "ytdPrior": 51861.6,
+        "favorability": "higherIsBetter",
+        "glCode": "4500-0000"
+      }
+    ],
+    "totalIncome": {
+      "key": "totalIncome",
+      "label": "Total Income",
+      "ptdCurrent": 752640,
+      "ptdPrior": 711244.8,
+      "ytdCurrent": 3010560,
+      "ytdPrior": 2844979.2,
+      "favorability": "higherIsBetter",
+      "isSubtotal": true
+    },
+    "expenses": [
+      {
+        "key": "fixedExpenses",
+        "label": "Fixed Expenses",
+        "ptdCurrent": 91080,
+        "ptdPrior": 82427.4,
+        "ytdCurrent": 364320,
+        "ytdPrior": 329709.6,
+        "favorability": "lowerIsBetter",
+        "glCode": "6000-0000"
+      },
+      {
+        "key": "repairsMaintenance",
+        "label": "Repairs & Maintenance",
+        "ptdCurrent": 59400,
+        "ptdPrior": 53757,
+        "ytdCurrent": 237600,
+        "ytdPrior": 215028,
+        "favorability": "lowerIsBetter",
+        "glCode": "6100-0000"
+      },
+      {
+        "key": "utilities",
+        "label": "Utilities",
+        "ptdCurrent": 77220,
+        "ptdPrior": 69884.1,
+        "ytdCurrent": 308880,
+        "ytdPrior": 279536.4,
+        "favorability": "lowerIsBetter",
+        "glCode": "6200-0000"
+      },
+      {
+        "key": "gAndA",
+        "label": "General & Administrative",
+        "ptdCurrent": 29700,
+        "ptdPrior": 26878.5,
+        "ytdCurrent": 118800,
+        "ytdPrior": 107514,
+        "favorability": "lowerIsBetter",
+        "glCode": "6300-0000"
+      },
+      {
+        "key": "marketing",
+        "label": "Marketing",
+        "ptdCurrent": 19800,
+        "ptdPrior": 17919,
+        "ytdCurrent": 79200,
+        "ytdPrior": 71676,
+        "favorability": "lowerIsBetter",
+        "glCode": "6400-0000"
+      },
+      {
+        "key": "makeReadyTurnover",
+        "label": "Make Ready / Turnover",
+        "ptdCurrent": 11880,
+        "ptdPrior": 10751.4,
+        "ytdCurrent": 47520,
+        "ytdPrior": 43005.6,
+        "favorability": "lowerIsBetter",
+        "glCode": "6500-0000"
+      },
+      {
+        "key": "professionalServices",
+        "label": "Professional Services",
+        "ptdCurrent": 4950,
+        "ptdPrior": 4479.75,
+        "ytdCurrent": 19800,
+        "ytdPrior": 17919,
+        "favorability": "lowerIsBetter",
+        "glCode": "6600-0000"
+      },
+      {
+        "key": "payrollLabor",
+        "label": "Payroll / Labor",
+        "ptdCurrent": 118800,
+        "ptdPrior": 107514,
+        "ytdCurrent": 475200,
+        "ytdPrior": 430056,
+        "favorability": "lowerIsBetter",
+        "glCode": "6700-0000"
+      }
+    ],
+    "totalOperatingExpenses": {
+      "key": "totalOperatingExpenses",
+      "label": "Total Operating Expenses",
+      "ptdCurrent": 412830,
+      "ptdPrior": 373611.15,
+      "ytdCurrent": 1651320,
+      "ytdPrior": 1494444.6,
+      "favorability": "lowerIsBetter",
+      "isSubtotal": true
+    },
+    "netOperatingIncome": {
+      "key": "netOperatingIncome",
+      "label": "Net Operating Income",
+      "ptdCurrent": 339810,
+      "ptdPrior": 337633.65,
+      "ytdCurrent": 1359240,
+      "ytdPrior": 1350534.6,
+      "favorability": "higherIsBetter",
+      "isResult": true
+    }
+  },
+  "rentRoll": {
+    "asOf": "2025-12-31",
+    "totalUnits": 156,
+    "occupiedUnits": 143,
+    "vacantUnits": 13,
+    "physicalOccupancy": 0.916667,
+    "totalSqFt": 132600,
+    "avgUnitSqFt": 850,
+    "avgUnitRent": 1237.56,
+    "avgOccupiedUnitRent": 1350.07,
+    "avgResidentRent": 1316.7,
+    "totalMarketRent": 215820,
+    "totalInPlaceRent": 193060,
+    "economicOccupancy": 0.894542
+  },
+  "leasing": {
+    "moveIns": 13,
+    "moveOuts": 17,
+    "netAbsorption": -4,
+    "noticesToVacate": 15,
+    "unitsRented": 21,
+    "renewals": 18,
+    "evictions": 1
+  },
+  "occupancySeries": {
+    "currentYear": 2025,
+    "priorYear": 2024,
+    "current": [
+      0.945,
+      0.943,
+      0.94,
+      0.938,
+      0.935,
+      0.933,
+      0.93,
+      0.928,
+      0.926,
+      0.925,
+      0.924,
+      0.923
+    ],
+    "prior": [
+      0.9356,
+      0.9336,
+      0.9306,
+      0.9286,
+      0.9257,
+      0.9237,
+      0.9207,
+      0.9187,
+      0.9167,
+      0.9158,
+      0.9148,
+      0.9138
+    ]
+  },
+  "narrative": [
+    {
+      "key": "marketCommentary",
+      "title": "Market Commentary",
+      "status": "Completed",
+      "body": "Prior quarter market commentary, finalized."
+    },
+    {
+      "key": "propertyOperations",
+      "title": "Property Operations",
+      "status": "Completed",
+      "body": "Prior quarter operations summary, finalized."
+    },
+    {
+      "key": "conditionsRenovation",
+      "title": "Property Conditions & Renovation Plans",
+      "status": "Completed",
+      "body": "Prior quarter conditions and renovation notes, finalized."
+    }
+  ],
+  "images": [
+    {
+      "slot": "propertyPhoto",
+      "url": null,
+      "alt": "Cedarfield Flats property photo"
+    },
+    {
+      "slot": "aerialSiteMap",
+      "url": null,
+      "alt": "Cedarfield Flats aerial site map"
+    }
+  ],
+  "provenance": [
+    {
+      "text": "Governed from Yardi Voyager quarterly export, Q4'25."
+    },
+    {
+      "text": "Cash basis. 5 quarters retained."
+    },
+    {
+      "text": "Prior-year comparatives from Q4'24 governed export."
+    }
+  ],
+  "scope": {
+    "kind": "property",
+    "propertyId": "cedarfield"
+  }
+}

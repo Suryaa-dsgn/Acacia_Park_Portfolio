@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "quarter": "2026-q1",
+    "quarterLabel": "Q1'26",
+    "fiscalYear": 2026,
+    "quarterNumber": 1,
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "priorPeriodStart": "2025-01-01",
+    "priorPeriodEnd": "2025-03-31",
+    "accountingBasis": "Cash",
+    "rentRollAsOf": "2026-03-31",
+    "generatedAt": "2026-04-15T09:00:00Z"
+  },
+  "identity": {
+    "kind": "property",
+    "tradeName": "Dunmore Yards",
+    "legalEntity": "Dunmore Yards (OH), LLC",
+    "manager": "Aspen Peak Management",
+    "addressLine": "2100 Eakin Rd",
+    "cityStateZip": "Columbus, OH 43223",
+    "submarket": "West Columbus",
+    "units": 402,
+    "totalSqFt": 341700
+  },
+  "operatingStatement": {
+    "income": [
+      {
+        "key": "rentalIncome",
+        "label": "Rental Income",
+        "ptdCurrent": 1520000,
+        "ptdPrior": 1436400,
+        "ytdCurrent": 1520000,
+        "ytdPrior": 1436400,
+        "favorability": "higherIsBetter",
+        "glCode": "4300-0000"
+      },
+      {
+        "key": "otherResidentIncome",
+        "label": "Other Resident Income",
+        "ptdCurrent": 70000,
+        "ptdPrior": 66150,
+        "ytdCurrent": 70000,
+        "ytdPrior": 66150,
+        "favorability": "higherIsBetter",
+        "glCode": "4400-0000"
+      },
+      {
+        "key": "otherPropertyIncome",
+        "label": "Other Property Income",
+        "ptdCurrent": 30000,
+        "ptdPrior": 28350,
+        "ytdCurrent": 30000,
+        "ytdPrior": 28350,
+        "favorability": "higherIsBetter",
+        "glCode": "4500-0000"
+      }
+    ],
+    "totalIncome": {
+      "key": "totalIncome",
+      "label": "Total Income",
+      "ptdCurrent": 1620000,
+      "ptdPrior": 1530900,
+      "ytdCurrent": 1620000,
+      "ytdPrior": 1530900,
+      "favorability": "higherIsBetter",
+      "isSubtotal": true
+    },
+    "expenses": [
+      {
+        "key": "fixedExpenses",
+        "label": "Fixed Expenses",
+        "ptdCurrent": 210000,
+        "ptdPrior": 190050,
+        "ytdCurrent": 210000,
+        "ytdPrior": 190050,
+        "favorability": "lowerIsBetter",
+        "glCode": "6000-0000"
+      },
+      {
+        "key": "repairsMaintenance",
+        "label": "Repairs & Maintenance",
+        "ptdCurrent": 150000,
+        "ptdPrior": 135750,
+        "ytdCurrent": 150000,
+        "ytdPrior": 135750,
+        "favorability": "lowerIsBetter",
+        "glCode": "6100-0000"
+      },
+      {
+        "key": "utilities",
+        "label": "Utilities",
+        "ptdCurrent": 175000,
+        "ptdPrior": 158375,
+        "ytdCurrent": 175000,
+        "ytdPrior": 158375,
+        "favorability": "lowerIsBetter",
+        "glCode": "6200-0000"
+      },
+      {
+        "key": "gAndA",
+        "label": "General & Administrative",
+        "ptdCurrent": 70000,
+        "ptdPrior": 63350,
+        "ytdCurrent": 70000,
+        "ytdPrior": 63350,
+        "favorability": "lowerIsBetter",
+        "glCode": "6300-0000"
+      },
+      {
+        "key": "marketing",
+        "label": "Marketing",
+        "ptdCurrent": 60000,
+        "ptdPrior": 54300,
+        "ytdCurrent": 60000,
+        "ytdPrior": 54300,
+        "favorability": "lowerIsBetter",
+        "glCode": "6400-0000"
+      },
+      {
+        "key": "makeReadyTurnover",
+        "label": "Make Ready / Turnover",
+        "ptdCurrent": 40000,
+        "ptdPrior": 36200,
+        "ytdCurrent": 40000,
+        "ytdPrior": 36200,
+        "favorability": "lowerIsBetter",
+        "glCode": "6500-0000"
+      },
+      {
+        "key": "professionalServices",
+        "label": "Professional Services",
+        "ptdCurrent": 12000,
+        "ptdPrior": 10860,
+        "ytdCurrent": 12000,
+        "ytdPrior": 10860,
+        "favorability": "lowerIsBetter",
+        "glCode": "6600-0000"
+      },
+      {
+        "key": "payrollLabor",
+        "label": "Payroll / Labor",
+        "ptdCurrent": 320000,
+        "ptdPrior": 289600,
+        "ytdCurrent": 320000,
+        "ytdPrior": 289600,
+        "favorability": "lowerIsBetter",
+        "glCode": "6700-0000"
+      }
+    ],
+    "totalOperatingExpenses": {
+      "key": "totalOperatingExpenses",
+      "label": "Total Operating Expenses",
+      "ptdCurrent": 1037000,
+      "ptdPrior": 938485,
+      "ytdCurrent": 1037000,
+      "ytdPrior": 938485,
+      "favorability": "lowerIsBetter",
+      "isSubtotal": true
+    },
+    "netOperatingIncome": {
+      "key": "netOperatingIncome",
+      "label": "Net Operating Income",
+      "ptdCurrent": 583000,
+      "ptdPrior": 592415,
+      "ytdCurrent": 583000,
+      "ytdPrior": 592415,
+      "favorability": "higherIsBetter",
+      "isResult": true
+    }
+  },
+  "rentRoll": {
+    "asOf": "2026-03-31",
+    "totalUnits": 402,
+    "occupiedUnits": 357,
+    "vacantUnits": 45,
+    "physicalOccupancy": 0.88806,
+    "totalSqFt": 341700,
+    "avgUnitSqFt": 850,
+    "avgUnitRent": 1124,
+    "avgOccupiedUnitRent": 1266,
+    "avgResidentRent": 1240,
+    "totalMarketRent": 522000,
+    "totalInPlaceRent": 452000,
+    "economicOccupancy": 0.8659
+  },
+  "leasing": {
+    "moveIns": 30,
+    "moveOuts": 34,
+    "noticesToVacate": 40,
+    "unitsRented": 45,
+    "renewals": 38,
+    "evictions": 3,
+    "netAbsorption": -4
+  },
+  "occupancySeries": {
+    "currentYear": 2026,
+    "priorYear": 2025,
+    "current": [
+      0.893,
+      0.891,
+      0.889,
+      0.886,
+      0.884,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "prior": [
+      0.905,
+      0.903,
+      0.901,
+      0.899,
+      0.897,
+      0.895,
+      0.893,
+      0.892,
+      0.891,
+      0.89,
+      0.889,
+      0.888
+    ]
+  },
+  "narrative": [
+    {
+      "key": "marketCommentary",
+      "title": "Market Commentary",
+      "status": "Gathering Info",
+      "body": null
+    },
+    {
+      "key": "propertyOperations",
+      "title": "Property Operations",
+      "status": "Not Started",
+      "body": null
+    },
+    {
+      "key": "conditionsRenovation",
+      "title": "Property Conditions & Renovation Plans",
+      "status": "Not Started",
+      "body": null
+    }
+  ],
+  "images": [
+    {
+      "slot": "propertyPhoto",
+      "url": null,
+      "alt": "Dunmore Yards property photo"
+    },
+    {
+      "slot": "aerialSiteMap",
+      "url": null,
+      "alt": "Dunmore Yards aerial site map"
+    }
+  ],
+  "provenance": [
+    {
+      "text": "Governed from Yardi Voyager quarterly export, Q1'26."
+    },
+    {
+      "text": "Cash basis. 5 quarters retained."
+    },
+    {
+      "text": "Prior-year comparatives from Q1'25 governed export."
+    }
+  ],
+  "scope": {
+    "kind": "property",
+    "propertyId": "dunmore"
+  }
+}
