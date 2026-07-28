@@ -114,9 +114,8 @@
 }
 
 :root {
-  /* font role aliases. GeistSans exposes --font-geist-sans via its variable
-     class on <html>; the serif and mono families set their own variables. */
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-plus-jakarta-sans);
+  --font-mono: var(--font-plus-jakarta-sans);
 
   /* motion tokens, DG 7.2 (theme-independent) */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
