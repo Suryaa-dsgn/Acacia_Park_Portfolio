@@ -61,9 +61,9 @@ function OperatingExpensePie({ report }: { report: QuarterlyReport }) {
       title="Operating Expense Breakdown"
       className={INSET}
     >
-      <div className="flex items-start gap-5">
+      <div className="flex items-start gap-8">
         <div className="shrink-0">
-          <PieChart segments={segments} size={120} />
+          <PieChart segments={segments} size={144} />
         </div>
         <div className="flex flex-col gap-1.5 min-w-0 flex-1">
           {segments.map((s) => (

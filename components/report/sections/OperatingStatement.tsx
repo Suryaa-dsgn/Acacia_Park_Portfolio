@@ -40,6 +40,9 @@ function LineRow({
   result?: boolean;
 }) {
   const positiveResult = result && line.ptdCurrent > 0;
+  const py = result ? "py-3" : "py-1.5";
+  const firstPl = result ? "pl-3" : "";
+  const lastPr = result ? "pr-3" : "";
   return (
     <tr
       className={cnRow(emphasis, result)}
@@ -50,20 +53,20 @@ function LineRow({
       <th
         scope="row"
         title={line.glCode ? `GL ${line.glCode}` : undefined}
-        className={`py-1.5 pr-3 text-left font-sans ${
+        className={`${py} ${firstPl} pr-3 text-left font-sans ${
           emphasis || result ? "font-semibold text-text-serif" : "font-normal text-ink"
         }`}
       >
         {line.label}
       </th>
-      <td className="py-1.5 pl-3 text-right tabular text-ink">{money(line.ptdPrior)}</td>
-      <td className="py-1.5 pl-3 text-right tabular text-ink">{money(line.ptdCurrent)}</td>
-      <td className="py-1.5 pl-3 text-right tabular">
+      <td className={`${py} pl-3 text-right tabular text-ink`}>{money(line.ptdPrior)}</td>
+      <td className={`${py} pl-3 text-right tabular text-ink`}>{money(line.ptdCurrent)}</td>
+      <td className={`${py} pl-3 text-right tabular`}>
         <DeltaCell current={line.ptdCurrent} prior={line.ptdPrior} favorability={line.favorability} />
       </td>
-      <td className="py-1.5 pl-4 text-right tabular text-ink">{money(line.ytdPrior)}</td>
-      <td className="py-1.5 pl-3 text-right tabular text-ink">{money(line.ytdCurrent)}</td>
-      <td className="py-1.5 pl-3 text-right tabular">
+      <td className={`${py} pl-4 text-right tabular text-ink`}>{money(line.ytdPrior)}</td>
+      <td className={`${py} pl-3 text-right tabular text-ink`}>{money(line.ytdCurrent)}</td>
+      <td className={`${py} pl-3 ${lastPr} text-right tabular`}>
         <DeltaCell current={line.ytdCurrent} prior={line.ytdPrior} favorability={line.favorability} />
       </td>
     </tr>
