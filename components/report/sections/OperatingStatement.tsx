@@ -89,7 +89,7 @@ function GroupRow({ label }: { label: string }) {
   );
 }
 
-export function OperatingStatement({ report }: { report: QuarterlyReport }) {
+export function OperatingStatement({ report, className }: { report: QuarterlyReport; className?: string }) {
   const os = report.operatingStatement;
   const cols = statementColumns(report.meta);
 
@@ -98,6 +98,7 @@ export function OperatingStatement({ report }: { report: QuarterlyReport }) {
       eyebrow="Financials"
       title="Operating Statement"
       description="Period-to-date and year-to-date, current versus prior year."
+      className={className}
     >
       <div className="overflow-x-auto">
         <table className="w-full min-w-[520px] border-collapse text-[0.8rem]">

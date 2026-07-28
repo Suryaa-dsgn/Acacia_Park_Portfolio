@@ -9,7 +9,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { revealContainer, revealItem, revealItemReduced } from "@/lib/motion";
 import { HoldingHeader } from "./sections/HoldingHeader";
 import { Financials } from "./sections/Financials";
-import { Leasing } from "./sections/Leasing";
 import { PortfolioComposition } from "./sections/PortfolioComposition";
 import { AuditProvenance } from "./sections/AuditProvenance";
 import type { QuarterlyReport } from "@/lib/types";
@@ -38,9 +37,6 @@ export function HoldingReportView({ report }: { report: QuarterlyReport }) {
       </Section>
       <Section>
         <Financials report={report} />
-      </Section>
-      <Section>
-        <Leasing report={report} />
       </Section>
       <Section>
         <PortfolioComposition

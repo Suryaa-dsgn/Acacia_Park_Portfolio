@@ -73,6 +73,7 @@ export function OccupancyRentCombo({
         ref={svgRef}
         viewBox={`0 0 ${width} ${height}`}
         className="w-full"
+        height={height}
         role="img"
         aria-label={`Occupancy and rent growth, ${years[0]} and ${years[1]}`}
         onMouseMove={onMove}

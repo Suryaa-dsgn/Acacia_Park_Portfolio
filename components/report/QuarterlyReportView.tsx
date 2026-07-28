@@ -9,7 +9,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { revealContainer, revealItem, revealItemReduced } from "@/lib/motion";
 import { ReportHeader } from "./sections/ReportHeader";
 import { Financials } from "./sections/Financials";
-import { Leasing } from "./sections/Leasing";
 import { Narrative } from "./sections/Narrative";
 import { PropertyImages } from "./sections/PropertyImages";
 import { AuditProvenance } from "./sections/AuditProvenance";
@@ -50,9 +49,6 @@ export function QuarterlyReportView({ report }: { report: QuarterlyReport }) {
       </Section>
       <Section>
         <Financials report={report} />
-      </Section>
-      <Section>
-        <Leasing report={report} />
       </Section>
       {report.narrative && (
         <Section>

@@ -8,11 +8,11 @@ import { MetricTile } from "@/components/report/MetricTile";
 import { count, delta } from "@/lib/format";
 import type { QuarterlyReport } from "@/lib/types";
 
-export function Leasing({ report }: { report: QuarterlyReport }) {
+export function Leasing({ report, className }: { report: QuarterlyReport; className?: string }) {
   const l = report.leasing;
   if (!l) {
     return (
-      <Panel eyebrow="This quarter" title="Leasing Activity">
+      <Panel eyebrow="This quarter" title="Leasing Activity" className={className}>
         <p className="font-sans text-body italic text-muted">
           Not governed for this quarter.
         </p>
@@ -20,7 +20,7 @@ export function Leasing({ report }: { report: QuarterlyReport }) {
     );
   }
   return (
-    <Panel eyebrow="This quarter" title="Leasing Activity">
+    <Panel eyebrow="This quarter" title="Leasing Activity" className={className}>
       <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-4">
         <MetricTile label="Move-Ins" value={count(l.moveIns)} />
         <MetricTile label="Move-Outs" value={count(l.moveOuts)} />

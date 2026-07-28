@@ -8,7 +8,7 @@ import { OccupancyRentCombo } from "@/components/charts/OccupancyRentCombo";
 import { MONTH_ABBR } from "@/lib/report";
 import type { QuarterlyReport } from "@/lib/types";
 
-export function OccupancyTrend({ report }: { report: QuarterlyReport }) {
+export function OccupancyTrend({ report, className }: { report: QuarterlyReport; className?: string }) {
   const h = report.occupancyRentHistory;
 
   return (
@@ -16,6 +16,7 @@ export function OccupancyTrend({ report }: { report: QuarterlyReport }) {
       eyebrow="Two years"
       title="Occupancy and Rent Growth"
       description="Monthly physical occupancy (bars, right axis) and average in-place rent (lines, left axis)."
+      className={className}
     >
       {h ? (
         <OccupancyRentCombo
@@ -23,7 +24,7 @@ export function OccupancyTrend({ report }: { report: QuarterlyReport }) {
           years={h.years}
           occupancy={h.occupancy}
           avgInPlaceRent={h.avgInPlaceRent}
-          height={300}
+          height={338}
         />
       ) : (
         <p className="font-sans text-body italic text-muted">

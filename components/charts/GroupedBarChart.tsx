@@ -66,6 +66,7 @@ export function GroupedBarChart({
       <svg
         viewBox={`0 0 ${width} ${height}`}
         className="w-full"
+        height={height}
         role="img"
         aria-label={`Year over year: ${groups.map((g) => g.label).join(", ")}`}
         style={{ display: "block" }}

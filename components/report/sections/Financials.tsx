@@ -1,20 +1,26 @@
 // components/report/sections/Financials.tsx
-// The Financials block (design review). Two responsive rows that use the width:
-//   Row A: Operating Statement table | Year-over-Year grouped bar chart
-//   Row B: Operating Expense pie      | Occupancy + Rent Growth combo
-// Each cell is a Panel. Rows stack on narrow widths so nothing crowds, and go
-// side by side on wide screens.
+// The Financials block. Two rows, each rendered as ONE shared bg-panel container
+// so both columns always share the same visual box — no height-mismatch gaps.
+// Sections inside each row are transparent (no individual card styling); standalone
+// border divs provide the hairline separators between sections.
 import { Panel } from "@/components/primitives/Panel";
 import { LegendChip } from "@/components/primitives/LegendChip";
 import { OperatingStatement } from "./OperatingStatement";
 import { OccupancyTrend } from "./OccupancyTrend";
 import { RentRoll } from "./RentRoll";
+import { Leasing } from "./Leasing";
 import { GroupedBarChart } from "@/components/charts/GroupedBarChart";
 import { PieChart } from "@/components/charts/PieChart";
 import { statementColumns } from "@/lib/report";
 import { money, percent } from "@/lib/format";
 import { CATEGORICAL } from "@/lib/semantic";
 import type { QuarterlyReport } from "@/lib/types";
+
+const INSET = "!bg-transparent !border-0 !rounded-none ![box-shadow:none]";
+
+function Divider() {
+  return <div className="border-t border-hairline" aria-hidden="true" />;
+}
 
 function YearOverYearBars({ report }: { report: QuarterlyReport }) {
   const os = report.operatingStatement;
@@ -29,12 +35,13 @@ function YearOverYearBars({ report }: { report: QuarterlyReport }) {
       eyebrow="Financials"
       title="Year over Year"
       description="Total income, operating expenses, and NOI, prior versus current year."
+      className={INSET}
     >
       <GroupedBarChart
         groups={groups}
         priorLabel={cols.prior}
         currentLabel={cols.current}
-        height={200}
+        height={182}
       />
     </Panel>
   );
@@ -49,7 +56,11 @@ function OperatingExpensePie({ report }: { report: QuarterlyReport }) {
     color: CATEGORICAL[i % CATEGORICAL.length],
   }));
   return (
-    <Panel eyebrow="Performance" title="Operating Expense Breakdown">
+    <Panel
+      eyebrow="Performance"
+      title="Operating Expense Breakdown"
+      className={INSET}
+    >
       <div className="flex flex-col items-center gap-4">
         <PieChart segments={segments} size={160} />
         <div className="w-full flex flex-col gap-1.5">
@@ -73,17 +84,35 @@ function OperatingExpensePie({ report }: { report: QuarterlyReport }) {
 export function Financials({ report }: { report: QuarterlyReport }) {
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1.5fr_1fr] xl:items-start">
-        <OperatingStatement report={report} />
-        <div className="flex flex-col gap-4">
-          <YearOverYearBars report={report} />
-          <OperatingExpensePie report={report} />
+
+      {/* Row 1: one shared box */}
+      <div className="rounded-md border border-hairline bg-panel overflow-hidden">
+        <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr]">
+          <OperatingStatement report={report} className={INSET} />
+          {/* Right col: column divider via wrapper, horizontal divider via Divider */}
+          <div className="flex flex-col border-t border-hairline xl:border-t-0 xl:border-l xl:border-hairline">
+            <YearOverYearBars report={report} />
+            <Divider />
+            <OperatingExpensePie report={report} />
+          </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-        <RentRoll report={report} />
-        <OccupancyTrend report={report} />
+
+      {/* Row 2: one shared box */}
+      <div className="rounded-md border border-hairline bg-panel overflow-hidden">
+        <div className="grid grid-cols-1 xl:grid-cols-2">
+          <div className="flex flex-col">
+            <Leasing report={report} className={INSET} />
+            <Divider />
+            <RentRoll report={report} className={INSET} />
+          </div>
+          {/* Occupancy: column divider via wrapper */}
+          <div className="border-t border-hairline xl:border-t-0 xl:border-l xl:border-hairline">
+            <OccupancyTrend report={report} className={INSET} />
+          </div>
+        </div>
       </div>
+
     </div>
   );
 }

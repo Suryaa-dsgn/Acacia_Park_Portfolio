@@ -10,10 +10,10 @@ import { occupancyBand } from "@/lib/semantic";
 import { usDate } from "@/lib/report";
 import type { QuarterlyReport } from "@/lib/types";
 
-export function RentRoll({ report }: { report: QuarterlyReport }) {
+export function RentRoll({ report, className }: { report: QuarterlyReport; className?: string }) {
   const rr = report.rentRoll;
   return (
-    <Panel eyebrow={`As of ${usDate(rr.asOf)}`} title="Rent Roll Summary">
+    <Panel eyebrow={`As of ${usDate(rr.asOf)}`} title="Rent Roll Summary" className={className}>
       <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 shell:grid-cols-4">
         <MetricTile label="Total Units" value={count(rr.totalUnits)} />
         <MetricTile label="Occupied Units" value={count(rr.occupiedUnits)} />
