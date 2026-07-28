@@ -67,7 +67,7 @@ export function AppShell({
             tabIndex={-1}
             role="tabpanel"
             aria-label="Quarterly report"
-            className="mx-auto w-full max-w-container flex-1 px-[clamp(16px,4vw,48px)] py-[clamp(24px,4vh,48px)]"
+            className="w-full flex-1 px-[clamp(16px,4vw,48px)] py-[clamp(24px,4vh,48px)]"
           >
             {children}
           </main>

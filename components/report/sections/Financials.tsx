@@ -73,7 +73,7 @@ function OperatingExpensePie({ report }: { report: QuarterlyReport }) {
 export function Financials({ report }: { report: QuarterlyReport }) {
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1.5fr_1fr]">
+      <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1.5fr_1fr] xl:items-start">
         <OperatingStatement report={report} />
         <div className="flex flex-col gap-4">
           <YearOverYearBars report={report} />
