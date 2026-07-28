@@ -45,7 +45,7 @@ module.exports = {
         // design review. The `serif` role name is kept so existing `font-serif`
         // heading classes need no per-file edits; it now resolves to Geist.
         serif: ["var(--font-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        mono: ["var(--font-mono)", "system-ui", "sans-serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       borderRadius: {
