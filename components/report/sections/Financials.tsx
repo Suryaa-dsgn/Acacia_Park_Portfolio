@@ -61,9 +61,11 @@ function OperatingExpensePie({ report }: { report: QuarterlyReport }) {
       title="Operating Expense Breakdown"
       className={INSET}
     >
-      <div className="flex flex-col items-center gap-4">
-        <PieChart segments={segments} size={160} />
-        <div className="w-full flex flex-col gap-1.5">
+      <div className="flex items-start gap-5">
+        <div className="shrink-0">
+          <PieChart segments={segments} size={120} />
+        </div>
+        <div className="flex flex-col gap-1.5 min-w-0 flex-1">
           {segments.map((s) => (
             <LegendChip
               key={s.label}
@@ -72,11 +74,11 @@ function OperatingExpensePie({ report }: { report: QuarterlyReport }) {
               value={percent(s.value / opexTotal)}
             />
           ))}
+          <p className="mt-3 font-mono text-caption uppercase tracking-[0.08em] text-muted">
+            Total OpEx: {money(opexTotal)}
+          </p>
         </div>
       </div>
-      <p className="mt-5 font-mono text-caption uppercase tracking-[0.08em] text-muted">
-        Total OpEx: {money(opexTotal)}
-      </p>
     </Panel>
   );
 }

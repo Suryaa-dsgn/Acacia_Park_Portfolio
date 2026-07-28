@@ -54,7 +54,9 @@ export function PieChart({
   const cx = size / 2;
   const cy = size / 2;
   const rOuter = size / 2 - 6;
-  const rInner = rOuter * 0.6;
+  const rInner = rOuter * 0.62;
+  const valFontSize = +(size * 0.088).toFixed(1);
+  const lblFontSize = +(size * 0.063).toFixed(1);
 
   let cursor = 0;
   const arcs = segments.map((s, i) => {
@@ -91,10 +93,10 @@ export function PieChart({
         />
       ))}
       {/* center label */}
-      <text x={cx} y={cy - 4} textAnchor="middle" className="fill-ink font-sans" style={{ fontSize: 15, fontWeight: 600 }}>
+      <text x={cx} y={cy - 2} textAnchor="middle" className="fill-ink font-sans" style={{ fontSize: valFontSize, fontWeight: 600 }}>
         {activeSeg ? percent(activeSeg.value / total) : formatValue(total)}
       </text>
-      <text x={cx} y={cy + 13} textAnchor="middle" className="fill-muted font-mono" style={{ fontSize: 9.5, letterSpacing: "0.03em" }}>
+      <text x={cx} y={cy + lblFontSize + 2} textAnchor="middle" className="fill-muted font-mono" style={{ fontSize: lblFontSize, letterSpacing: "0.03em" }}>
         {activeSeg ? activeSeg.label : "Total OpEx"}
       </text>
     </svg>
