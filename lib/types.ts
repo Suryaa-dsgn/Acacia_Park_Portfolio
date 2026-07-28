@@ -121,6 +121,15 @@ export interface OccupancySeries {
   prior: (number | null)[]; // length 12
 }
 
+// Two full comparison years of monthly physical occupancy and average in-place
+// rent, for the occupancy vs rent-growth combo chart (report spec section 8,
+// design review). Occupancy is a fraction; rent is dollars per unit per month.
+export interface OccupancyRentHistory {
+  years: [number, number]; // e.g. [2024, 2025], oldest first
+  occupancy: [number[], number[]]; // 12 values per year
+  avgInPlaceRent: [number[], number[]]; // 12 values per year
+}
+
 // ---------------------------------------------------------------------------
 // Narrative, images, provenance
 // ---------------------------------------------------------------------------
@@ -179,6 +188,7 @@ export interface QuarterlyReport {
   rentRoll: RentRollSummary;
   leasing: LeasingActivity | null; // null when not governed for the quarter
   occupancySeries: OccupancySeries;
+  occupancyRentHistory?: OccupancyRentHistory; // two full years, for the combo chart
   narrative: NarrativeSection[] | null; // null at holding level
   images: ReportImage[] | null; // null at holding level
   provenance: ProvenanceEntry[];

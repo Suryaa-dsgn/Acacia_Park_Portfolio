@@ -116,7 +116,7 @@ export function CompareView({
       <Section>
         <header>
           <Eyebrow>Compare</Eyebrow>
-          <h1 className="mt-2 font-serif text-display-lg text-text-serif">
+          <h1 className="mt-2 font-serif text-display-lg font-semibold text-text-serif">
             Properties, side by side
           </h1>
           <p className="mt-2 max-w-prose font-sans text-body-lg text-muted">

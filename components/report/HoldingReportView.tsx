@@ -8,13 +8,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { revealContainer, revealItem, revealItemReduced } from "@/lib/motion";
 import { HoldingHeader } from "./sections/HoldingHeader";
-import { KpiRow } from "./sections/KpiRow";
-import { OperatingStatement } from "./sections/OperatingStatement";
-import { PerformanceVisuals } from "./sections/PerformanceVisuals";
-import { Ratios } from "./sections/Ratios";
-import { RentRoll } from "./sections/RentRoll";
+import { Financials } from "./sections/Financials";
 import { Leasing } from "./sections/Leasing";
-import { OccupancyTrend } from "./sections/OccupancyTrend";
 import { PortfolioComposition } from "./sections/PortfolioComposition";
 import { AuditProvenance } from "./sections/AuditProvenance";
 import type { QuarterlyReport } from "@/lib/types";
@@ -36,31 +31,16 @@ export function HoldingReportView({ report }: { report: QuarterlyReport }) {
       variants={revealContainer}
       initial="hidden"
       animate="show"
-      className="flex flex-col gap-14"
+      className="flex flex-col gap-10"
     >
       <Section>
         <HoldingHeader identity={report.identity} meta={report.meta} />
       </Section>
       <Section>
-        <KpiRow report={report} />
-      </Section>
-      <Section>
-        <OperatingStatement report={report} />
-      </Section>
-      <Section>
-        <PerformanceVisuals report={report} />
-      </Section>
-      <Section>
-        <Ratios report={report} />
-      </Section>
-      <Section>
-        <RentRoll report={report} />
+        <Financials report={report} />
       </Section>
       <Section>
         <Leasing report={report} />
-      </Section>
-      <Section>
-        <OccupancyTrend report={report} />
       </Section>
       <Section>
         <PortfolioComposition

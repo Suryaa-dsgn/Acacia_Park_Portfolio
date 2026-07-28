@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { serif, mono, sans } from "./fonts";
+import { mono, sans } from "./fonts";
 import { ThemeScript } from "@/components/shell/ThemeScript";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio Reporting",
+  title: "Quarterly Report",
   description:
     "Quarterly operating reports for a multifamily real-estate portfolio.",
 };
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${serif.variable} ${mono.variable} ${sans.variable}`}
+      className={`${mono.variable} ${sans.variable}`}
     >
       <head>
         <ThemeScript />

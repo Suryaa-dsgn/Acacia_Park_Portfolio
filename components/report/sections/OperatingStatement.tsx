@@ -50,20 +50,20 @@ function LineRow({
       <th
         scope="row"
         title={line.glCode ? `GL ${line.glCode}` : undefined}
-        className={`py-3 pr-4 text-left font-sans ${
+        className={`py-1.5 pr-3 text-left font-sans ${
           emphasis || result ? "font-semibold text-text-serif" : "font-normal text-ink"
         }`}
       >
         {line.label}
       </th>
-      <td className="py-3 pl-4 text-right tabular text-ink">{money(line.ptdPrior)}</td>
-      <td className="py-3 pl-4 text-right tabular text-ink">{money(line.ptdCurrent)}</td>
-      <td className="py-3 pl-4 text-right tabular">
+      <td className="py-1.5 pl-3 text-right tabular text-ink">{money(line.ptdPrior)}</td>
+      <td className="py-1.5 pl-3 text-right tabular text-ink">{money(line.ptdCurrent)}</td>
+      <td className="py-1.5 pl-3 text-right tabular">
         <DeltaCell current={line.ptdCurrent} prior={line.ptdPrior} favorability={line.favorability} />
       </td>
-      <td className="py-3 pl-6 text-right tabular text-ink">{money(line.ytdPrior)}</td>
-      <td className="py-3 pl-4 text-right tabular text-ink">{money(line.ytdCurrent)}</td>
-      <td className="py-3 pl-4 text-right tabular">
+      <td className="py-1.5 pl-4 text-right tabular text-ink">{money(line.ytdPrior)}</td>
+      <td className="py-1.5 pl-3 text-right tabular text-ink">{money(line.ytdCurrent)}</td>
+      <td className="py-1.5 pl-3 text-right tabular">
         <DeltaCell current={line.ytdCurrent} prior={line.ytdPrior} favorability={line.favorability} />
       </td>
     </tr>
@@ -81,7 +81,7 @@ function GroupRow({ label }: { label: string }) {
     <tr>
       <td
         colSpan={7}
-        className="pb-2 pt-5 font-mono text-label uppercase text-muted"
+        className="pb-2 pt-4 font-mono text-label uppercase text-muted"
       >
         {label}
       </td>
@@ -100,7 +100,7 @@ export function OperatingStatement({ report }: { report: QuarterlyReport }) {
       description="Period-to-date and year-to-date, current versus prior year."
     >
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[720px] border-collapse">
+        <table className="w-full min-w-[520px] border-collapse text-[0.8rem]">
           <thead>
             <tr>
               <td className="w-[26%]" />
@@ -114,7 +114,7 @@ export function OperatingStatement({ report }: { report: QuarterlyReport }) {
               <th
                 scope="colgroup"
                 colSpan={3}
-                className="border-b border-hairline pb-1 pl-6 text-center font-mono text-label uppercase text-muted"
+                className="border-b border-hairline pb-1 pl-4 text-center font-mono text-label uppercase text-muted"
               >
                 Year-to-Date
               </th>
@@ -123,12 +123,12 @@ export function OperatingStatement({ report }: { report: QuarterlyReport }) {
               <th scope="col" className="pb-2 text-left font-mono text-label uppercase text-muted">
                 Account
               </th>
+              <th scope="col" className="pb-2 pl-3 text-right font-mono text-label uppercase text-muted">{cols.prior}</th>
+              <th scope="col" className="pb-2 pl-3 text-right font-mono text-label uppercase text-muted">{cols.current}</th>
+              <th scope="col" className="pb-2 pl-3 text-right font-mono text-label uppercase text-muted">%Δ</th>
               <th scope="col" className="pb-2 pl-4 text-right font-mono text-label uppercase text-muted">{cols.prior}</th>
-              <th scope="col" className="pb-2 pl-4 text-right font-mono text-label uppercase text-muted">{cols.current}</th>
-              <th scope="col" className="pb-2 pl-4 text-right font-mono text-label uppercase text-muted">%Δ</th>
-              <th scope="col" className="pb-2 pl-6 text-right font-mono text-label uppercase text-muted">{cols.prior}</th>
-              <th scope="col" className="pb-2 pl-4 text-right font-mono text-label uppercase text-muted">{cols.current}</th>
-              <th scope="col" className="pb-2 pl-4 text-right font-mono text-label uppercase text-muted">%Δ</th>
+              <th scope="col" className="pb-2 pl-3 text-right font-mono text-label uppercase text-muted">{cols.current}</th>
+              <th scope="col" className="pb-2 pl-3 text-right font-mono text-label uppercase text-muted">%Δ</th>
             </tr>
           </thead>
           <tbody>

@@ -144,7 +144,7 @@ export function Narrative({
             ) : (
               <div className="flex flex-col gap-3">
                 {body ? (
-                  <p className="max-w-prose font-sans text-body-lg text-ink">{body}</p>
+                  <p className="max-w-prose font-sans text-body text-ink">{body}</p>
                 ) : (
                   <p className="font-sans text-body italic text-muted">Not yet written</p>
                 )}

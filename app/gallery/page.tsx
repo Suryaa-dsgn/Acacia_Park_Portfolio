@@ -132,7 +132,7 @@ export default function GalleryPage() {
   return (
     <main className="mx-auto max-w-[1400px] px-[clamp(16px,4vw,48px)] py-16">
       <Eyebrow>Design System</Eyebrow>
-      <h1 className="mt-2 font-serif text-display-lg text-text-serif">
+      <h1 className="mt-2 font-serif text-display-lg font-semibold text-text-serif">
         Primitives gallery
       </h1>
       <p className="mt-3 max-w-prose font-sans text-body-lg text-muted">

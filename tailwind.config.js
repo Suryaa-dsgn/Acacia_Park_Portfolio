@@ -41,7 +41,10 @@ module.exports = {
         "cat-7": "var(--cat-7)",
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Georgia", "serif"],
+        // Headings moved from the Fraunces serif to Geist (rounded sans) per the
+        // design review. The `serif` role name is kept so existing `font-serif`
+        // heading classes need no per-file edits; it now resolves to Geist.
+        serif: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
@@ -52,16 +55,20 @@ module.exports = {
         pill: "999px",
       },
       fontSize: {
-        "display-xl": ["clamp(2.5rem, 1.8rem + 3vw, 3.5rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        "display-lg": ["clamp(2rem, 1.5rem + 2.2vw, 2.75rem)", { lineHeight: "1.08", letterSpacing: "-0.015em" }],
-        title: ["clamp(1.35rem, 1.2rem + 0.7vw, 1.6rem)", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
-        "kpi-value": ["clamp(1.6rem, 1.3rem + 1.2vw, 2rem)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
-        "body-lg": ["clamp(1.0625rem, 1rem + 0.3vw, 1.15rem)", { lineHeight: "1.55" }],
-        body: ["0.9375rem", { lineHeight: "1.55" }],
-        data: ["0.9375rem", { lineHeight: "1.3" }],
-        label: ["clamp(0.6875rem, 0.66rem + 0.15vw, 0.75rem)", { lineHeight: "1.2", letterSpacing: "0.1em" }],
+        // Condensed ~12% from the original scale (design review): denser, still
+        // readable. Geist runs a touch larger than Fraunces at the same rem, so
+        // the reduction also compensates for the family change.
+        "display-xl": ["clamp(2.1rem, 1.6rem + 2.4vw, 2.9rem)", { lineHeight: "1.06", letterSpacing: "-0.02em" }],
+        "display-lg": ["clamp(1.6rem, 1.3rem + 1.6vw, 2.15rem)", { lineHeight: "1.1", letterSpacing: "-0.015em" }],
+        display: ["clamp(1.6rem, 1.3rem + 1.6vw, 2.15rem)", { lineHeight: "1.1", letterSpacing: "-0.015em" }],
+        title: ["clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem)", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        "kpi-value": ["clamp(1.4rem, 1.2rem + 0.9vw, 1.75rem)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
+        "body-lg": ["clamp(0.9375rem, 0.9rem + 0.2vw, 1rem)", { lineHeight: "1.55" }],
+        body: ["0.875rem", { lineHeight: "1.5" }],
+        data: ["0.875rem", { lineHeight: "1.3" }],
+        label: ["clamp(0.65rem, 0.63rem + 0.12vw, 0.7rem)", { lineHeight: "1.2", letterSpacing: "0.1em" }],
         eyebrow: ["0.6875rem", { lineHeight: "1.2", letterSpacing: "0.14em" }],
-        caption: ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.04em" }],
+        caption: ["0.7188rem", { lineHeight: "1.4", letterSpacing: "0.04em" }],
       },
       boxShadow: {
         sm: "var(--shadow-sm)",

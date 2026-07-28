@@ -205,6 +205,12 @@ def read_q4():
     occ2024 = [round(float(occ[f"{c}13"].value), 6) for c in cols]
     occ2025 = [round(float(occ[f"{c}28"].value), 6) for c in cols]
 
+    # Average in-place rent per unit per month, on the Q4 Narrative sheet:
+    # 2024 in row 89, 2025 in row 90, months in columns Z..AK (Jan..Dec).
+    rent_cols = ["Z", "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ", "AK"]
+    rent2024 = [round(float(cell(f"{c}89")), 2) for c in rent_cols]
+    rent2025 = [round(float(cell(f"{c}90")), 2) for c in rent_cols]
+
     # Real authored narrative, complete for Q4 2025.
     narrative = [
         {"key": "marketCommentary", "title": "Market Commentary", "status": "Completed", "body": norm(cell("D15"))},
@@ -219,6 +225,11 @@ def read_q4():
         "priorYear": 2024,
         "occCurrent": occ2025,  # 2025
         "occPrior": occ2024,    # 2024
+        "occupancyRentHistory": {
+            "years": [2024, 2025],
+            "occupancy": [occ2024, occ2025],
+            "avgInPlaceRent": [rent2024, rent2025],
+        },
         "narrative": narrative,
         "provenance": [
             {"text": "Operating statement sourced from the Q4 2025 Yardi Income Statement (Cash basis), Acacia Park Apartments."},
@@ -262,7 +273,11 @@ def main():
     # Leasing is not governed for Q4 2025.
     q4["leasing"] = None
 
-    data = {"identity": IDENTITY, "quarters": {"2026-q1": q1, "2025-q4": q4}}
+    data = {
+        "identity": IDENTITY,
+        "occupancyRentHistory": q4["occupancyRentHistory"],
+        "quarters": {"2026-q1": q1, "2025-q4": q4},
+    }
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     print(f"wrote {OUT}")

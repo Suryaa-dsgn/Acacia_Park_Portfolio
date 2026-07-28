@@ -8,13 +8,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { revealContainer, revealItem, revealItemReduced } from "@/lib/motion";
 import { ReportHeader } from "./sections/ReportHeader";
-import { KpiRow } from "./sections/KpiRow";
-import { OperatingStatement } from "./sections/OperatingStatement";
-import { PerformanceVisuals } from "./sections/PerformanceVisuals";
-import { Ratios } from "./sections/Ratios";
-import { RentRoll } from "./sections/RentRoll";
+import { Financials } from "./sections/Financials";
 import { Leasing } from "./sections/Leasing";
-import { OccupancyTrend } from "./sections/OccupancyTrend";
 import { Narrative } from "./sections/Narrative";
 import { PropertyImages } from "./sections/PropertyImages";
 import { AuditProvenance } from "./sections/AuditProvenance";
@@ -42,7 +37,7 @@ export function QuarterlyReportView({ report }: { report: QuarterlyReport }) {
       variants={revealContainer}
       initial="hidden"
       animate="show"
-      className="flex flex-col gap-14"
+      className="flex flex-col gap-10"
     >
       <Section>
         <ReportHeader
@@ -54,25 +49,10 @@ export function QuarterlyReportView({ report }: { report: QuarterlyReport }) {
         />
       </Section>
       <Section>
-        <KpiRow report={report} />
-      </Section>
-      <Section>
-        <OperatingStatement report={report} />
-      </Section>
-      <Section>
-        <PerformanceVisuals report={report} />
-      </Section>
-      <Section>
-        <Ratios report={report} />
-      </Section>
-      <Section>
-        <RentRoll report={report} />
+        <Financials report={report} />
       </Section>
       <Section>
         <Leasing report={report} />
-      </Section>
-      <Section>
-        <OccupancyTrend report={report} />
       </Section>
       {report.narrative && (
         <Section>

@@ -189,7 +189,7 @@ export function SignalView({
           <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-md">
               <Eyebrow>{`${quarterLabel} Portfolio Signal · ${properties.length} properties`}</Eyebrow>
-              <h1 className="mt-2 font-serif text-display-lg text-text-serif">
+              <h1 className="mt-2 font-serif text-display-lg font-semibold text-text-serif">
                 Your assets, read as a skyline.
               </h1>
               <p className="mt-3 max-w-prose font-sans text-body-lg text-muted">
@@ -333,7 +333,7 @@ export function SignalView({
             <div className="flex items-center gap-4">
               <ProbabilityRing value={portfolioProb} />
               <div>
-                <div className="font-serif text-display text-text-serif">{percent(portfolioProb)}</div>
+                <div className="font-serif text-display font-semibold text-text-serif">{percent(portfolioProb)}</div>
                 <div className="font-sans text-caption text-muted">portfolio, {horizon}M horizon</div>
               </div>
             </div>

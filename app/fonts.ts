@@ -1,16 +1,10 @@
 // app/fonts.ts
-// The tri-family type system (DG section 2). Three families, three strict roles:
-// serif for display, mono for labels, sans for all data. Wired to CSS variables
-// consumed by tailwind.config and the token layer.
-import { Fraunces, IBM_Plex_Mono } from "next/font/google";
+// The type system (DG section 2), updated in the design review: Geist (rounded
+// sans) for both headings and data, mono for labels. The Fraunces serif was
+// retired, so headings and body now share one family, differentiated by weight
+// and size. Wired to CSS variables consumed by tailwind.config and the tokens.
+import { IBM_Plex_Mono } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
-
-export const serif = Fraunces({
-  subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
-  variable: "--font-serif",
-  display: "swap",
-});
 
 export const mono = IBM_Plex_Mono({
   subsets: ["latin"],

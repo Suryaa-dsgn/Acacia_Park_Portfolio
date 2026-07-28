@@ -6,7 +6,7 @@ import { cn } from "@/lib/cn";
 
 export function BrandLockup({
   className,
-  descriptor = "Portfolio Reporting",
+  descriptor = "Quarterly Report",
 }: {
   className?: string;
   descriptor?: string;

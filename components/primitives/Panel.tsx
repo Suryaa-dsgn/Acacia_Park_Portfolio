@@ -29,16 +29,16 @@ export function Panel({
       className={cn(
         // dark mode is near flat (borders only); light-mode shadow is applied
         // to .panel in base.css so resting dark surfaces stay shadowless (DG 6).
-        "panel rounded-md border border-hairline bg-panel p-6 md:p-7",
+        "panel rounded-md border border-hairline bg-panel p-5 md:p-6",
         className,
       )}
     >
       {hasHeader && (
-        <div className="mb-5 flex items-start justify-between gap-4">
+        <div className="mb-4 flex items-start justify-between gap-4">
           <div className="min-w-0">
-            {eyebrow && <Eyebrow className="mb-2">{eyebrow}</Eyebrow>}
+            {eyebrow && <Eyebrow className="mb-1.5">{eyebrow}</Eyebrow>}
             {title && (
-              <h2 className="font-serif text-title text-text-serif">{title}</h2>
+              <h2 className="font-serif text-title font-semibold text-text-serif">{title}</h2>
             )}
             {description && (
               <p className="mt-1.5 max-w-prose font-sans text-body text-muted">

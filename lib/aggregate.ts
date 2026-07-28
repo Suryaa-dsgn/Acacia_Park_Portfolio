@@ -14,6 +14,7 @@ import type {
   RentRollSummary,
   LeasingActivity,
   OccupancySeries,
+  OccupancyRentHistory,
   ProvenanceEntry,
   PropertyComposition,
   HoldingIdentity,
@@ -157,6 +158,47 @@ function aggregateOccupancy(reports: QuarterlyReport[]): OccupancySeries {
   };
 }
 
+// Unit-weighted roll-up of the two-year occupancy + rent history. Occupancy and
+// rent are both weighted by property units, month by month, across the
+// properties that carry the history. Returns undefined if none do.
+function aggregateOccupancyRentHistory(
+  reports: QuarterlyReport[],
+): OccupancyRentHistory | undefined {
+  const withHistory = reports.filter((r) => r.occupancyRentHistory);
+  if (withHistory.length === 0) return undefined;
+  const years = withHistory[0].occupancyRentHistory!.years;
+
+  const weightedSeries = (
+    pick: (h: OccupancyRentHistory, yearIdx: number) => number[],
+    yearIdx: number,
+  ): number[] =>
+    Array.from({ length: 12 }, (_, m) => {
+      let weighted = 0;
+      let weight = 0;
+      for (const r of withHistory) {
+        const v = pick(r.occupancyRentHistory!, yearIdx)[m];
+        if (v != null) {
+          const units = r.rentRoll.totalUnits;
+          weighted += v * units;
+          weight += units;
+        }
+      }
+      return weight === 0 ? 0 : weighted / weight;
+    });
+
+  return {
+    years,
+    occupancy: [
+      weightedSeries((h, y) => h.occupancy[y], 0),
+      weightedSeries((h, y) => h.occupancy[y], 1),
+    ],
+    avgInPlaceRent: [
+      weightedSeries((h, y) => h.avgInPlaceRent[y], 0),
+      weightedSeries((h, y) => h.avgInPlaceRent[y], 1),
+    ],
+  };
+}
+
 function parseCityState(cityStateZip: string): { city: string; state: string } {
   const [cityPart, rest] = cityStateZip.split(",");
   const state = (rest ?? "").trim().split(/\s+/)[0] ?? "";
@@ -242,6 +284,7 @@ export function aggregateHolding(
     rentRoll: aggregateRentRoll(reports),
     leasing: aggregateLeasing(reports),
     occupancySeries: aggregateOccupancy(reports),
+    occupancyRentHistory: aggregateOccupancyRentHistory(reports),
     narrative: null,
     images: null,
     provenance: buildProvenance(reports),

@@ -231,6 +231,21 @@ function reportFor(seed, quarter) {
         prior: seed.occ2025.map((v) => (v == null ? null : r4(v * 0.99))),
       };
 
+  // Two full comparison years (2024, 2025) of occupancy + avg in-place rent for
+  // the combo chart. Synthesized from the property's occupancy and rent level:
+  // 2024 occupancy runs ~1 point below 2025; rents trend gently upward within a
+  // year and 2025 sits ~3.5% above 2024.
+  const occ2025Full = seed.occ2025;
+  const occ2024Full = occ2025Full.map((v) => r4(Math.max(0, v - 0.011)));
+  const baseRent = rr.avgResidentRent;
+  const rent2024 = Array.from({ length: 12 }, (_, m) => r2(baseRent * (0.97 + m * 0.0025)));
+  const rent2025 = rent2024.map((v) => r2(v * 1.035));
+  const occupancyRentHistory = {
+    years: [2024, 2025],
+    occupancy: [occ2024Full, occ2025Full],
+    avgInPlaceRent: [rent2024, rent2025],
+  };
+
   const narrative = q1 ? seed.narrativeQ1 : narrativeCompleted();
 
   return {
@@ -250,6 +265,7 @@ function reportFor(seed, quarter) {
     rentRoll,
     leasing,
     occupancySeries,
+    occupancyRentHistory,
     narrative,
     images: [
       { slot: "propertyPhoto", url: null, alt: `${seed.tradeName} property photo` },
@@ -436,6 +452,7 @@ function acaciaReport(governed, quarter) {
       current: q.occCurrent,
       prior: q.occPrior,
     },
+    occupancyRentHistory: governed.occupancyRentHistory,
     narrative: q.narrative,
     images: [
       { slot: "propertyPhoto", url: null, alt: `${governed.identity.tradeName} property photo` },

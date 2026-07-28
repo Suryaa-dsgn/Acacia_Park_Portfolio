@@ -31,7 +31,7 @@ export function ReportHeader({
       <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div>
           <Eyebrow>{periodEyebrow(meta)}</Eyebrow>
-          <h1 className="mt-2 font-serif text-display-lg text-text-serif">
+          <h1 className="mt-2 font-serif text-[1.5rem] font-semibold leading-tight text-text-serif">
             {identity.tradeName}
           </h1>
         </div>
@@ -41,7 +41,7 @@ export function ReportHeader({
         />
       </div>
 
-      <dl className="mt-6 grid grid-cols-2 gap-x-8 gap-y-5 md:grid-cols-3">
+      <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 md:grid-cols-3 xl:grid-cols-5">
         <Fact label="Legal Entity">{identity.legalEntity}</Fact>
         <Fact label="Manager">{identity.manager}</Fact>
         <Fact label="Location">
@@ -56,7 +56,7 @@ export function ReportHeader({
         <Fact label="Accounting Basis">{meta.accountingBasis}</Fact>
       </dl>
 
-      <hr className="mt-8 border-hairline" />
+      <hr className="mt-5 border-hairline" />
     </header>
   );
 }
